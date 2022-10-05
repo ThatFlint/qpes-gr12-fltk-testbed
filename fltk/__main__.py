@@ -5,6 +5,7 @@ from typing import Optional, Any, Dict
 
 import sys
 
+
 from fltk.launch import launch_extractor, launch_client, launch_single, launch_remote, launch_cluster, launch_signature
 from fltk.util.config import get_distributed_config
 from fltk.util.config.arguments import create_all_subparsers
@@ -68,18 +69,13 @@ def main():
         print('No configuration path is provided.')
 
     launch_fn: launch_signature = __run_op_dict[args.action]
-    try:
-        launch_fn(arg_path, conf_path,
-                      _save_get(args, 'rank'),
-                      _save_get(args, 'nic'),
-                      _save_get(args, 'host'),
-                      _save_get(args, 'prefix'),
-                      args,
-                      distributed_config)
-    except Exception as e:
-        print(f"Failed with reason: {e}")
-        parser.print_help()
-        sys.exit(1)
+    launch_fn(arg_path, conf_path,
+              _save_get(args, 'rank'),
+              _save_get(args, 'nic'),
+              _save_get(args, 'host'),
+              _save_get(args, 'prefix'),
+              args,
+              distributed_config)
     sys.exit(0)
 
 

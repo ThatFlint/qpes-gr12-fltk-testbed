@@ -271,8 +271,9 @@ def launch_remote(arg_path: Path, conf_path: Path, rank: Rank, nic: Optional[NIC
 
     msg = f'Starting with host={host} and port={os.environ["MASTER_PORT"]} and interface={nic}'
     logging.log(logging.INFO, msg)
+    # fixme: Move to async implementation to prevent CPP memory leak
     options = rpc.TensorPipeRpcBackendOptions(
-            num_worker_threads=16,
+            num_worker_threads=16 if rank == 0 else 4,
             rpc_timeout=0,  # infinite timeout
             init_method='env://',
             _transports=["uv"]  # Use LibUV backend for async/IO interaction
@@ -344,9 +345,8 @@ def launch_cluster(arg_path: Path, conf_path: Path, rank: Rank, nic: Optional[NI
     for replication, experiment_seed in enumerate(conf.execution_config.reproducibility.seeds):
         logging.info(f"Starting with experiment replication: {replication} with seed: {experiment_seed}")
         init_reproducibility(conf.execution_config)
-        exec_orchestrator(args=args, conf=conf, replication=replication)
         try:
-            pass
+            exec_orchestrator(args=args, conf=conf, replication=replication)
         except Exception as e:
             logging.info(f"Execution of replication {replication} with seed {experiment_seed} failed."
                          f"Reason: {e}")
