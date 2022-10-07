@@ -73,3 +73,33 @@ class SimpleMnist(SimpleNet):  # pylint: disable=missing-class-docstring
         x = F.dropout(x, training=self.training)
         x = self.fc2(x)
         return F.log_softmax(x, dim=1)
+
+
+# LeNet-5 for MNIST, as per https://github.com/erykml/medium_articles/blob/master/Computer%20Vision/lenet5_pytorch.ipynb
+class Lenet5(SimpleNet):  # pylint: disable=missing-class-docstring
+    def __init__(self, name=None, created_time=None):
+        super(Lenet5, self).__init__(name, created_time)
+
+        self.feature_extractor = torch.nn.Sequential(
+            torch.nn.Conv2d(in_channels=1, out_channels=6, kernel_size=5, stride=1),
+            torch.nn.Tanh(),
+            torch.nn.AvgPool2d(kernel_size=2),
+            torch.nn.Conv2d(in_channels=6, out_channels=16, kernel_size=5, stride=1),
+            torch.nn.Tanh(),
+            torch.nn.AvgPool2d(kernel_size=2),
+            torch.nn.Conv2d(in_channels=16, out_channels=120, kernel_size=5, stride=1),
+            torch.nn.Tanh()
+        )
+
+        self.classifier = torch.nn.Sequential(
+            torch.nn.Linear(in_features=120, out_features=84),
+            torch.nn.Tanh(),
+            torch.nn.Linear(in_features=84, out_features=10)
+        )
+
+    def forward(self, x): # pylint: disable=missing-function-docstring
+        x = self.feature_extractor(x)
+        x = torch.flatten(x, 1)
+        logits = self.classifier(x)
+        probs = F.softmax(logits, dim=1)
+        return logits, probs

@@ -11,6 +11,7 @@ class Nets(Enum):
     fashion_mnist_cnn = 'FashionMNISTCNN'
     fashion_mnist_resnet = 'FashionMNISTResNet'
     mnist_cnn = 'MNISTCNN'
+    lenet_5 = 'Lenet5'
     vision_transformer = 'ViT'
 
     @classmethod

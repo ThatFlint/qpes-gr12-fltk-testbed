@@ -1,17 +1,17 @@
 {
    "cluster": {
       "orchestrator": {
-         "orchestrator_type": "simulated"
+         "orchestrator_type": "batch"
       },
       "client": {
          "prefix": "client",
          "tensorboard_active": false
       },
-      "image": "gcr.io/test-bed-fltk/fltk:latest",
+      "image": "gcr.io/test-bed-fltk-jerrit/fltk:latest",
       "namespace": "test"
    },
    "execution_config": {
-      "duration": 60,
+      "duration": 360,
       "experiment_prefix": "cloud_experiment",
       "cuda": false,
       "tensorboard": {

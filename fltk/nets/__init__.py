@@ -12,7 +12,7 @@ from .fashion_mnist_cnn import FashionMNISTCNN
 from .fashion_mnist_resnet import FashionMNISTResNet
 from .mnist_cnn import MNIST_CNN
 from .reddit_lstm import RNNModel
-from .simple import SimpleMnist, SimpleNet
+from .simple import SimpleMnist, SimpleNet, Lenet5
 
 # Add torchvision models
 from torchvision.models.vision_transformer import VisionTransformer, vit_b_16
@@ -32,6 +32,7 @@ def _available_nets() -> Dict[Nets, Type[torch.nn.Module]]:
         Nets.fashion_mnist_cnn: FashionMNISTCNN,
         Nets.fashion_mnist_resnet: FashionMNISTResNet,
         Nets.mnist_cnn: MNIST_CNN,
+        Nets.lenet_5: Lenet5,
         Nets.vision_transformer: VisionTransformer
     }
 
