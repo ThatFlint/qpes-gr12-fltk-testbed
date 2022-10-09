@@ -45,8 +45,8 @@ module "gke" {
       initial_node_count = 0
     },
     {
-      name               = "medium-fltk-pool-1"
-      machine_type       = "e2-highcpu-8"
+      name               = "small-fltk-pool-1"
+      machine_type       = "e2-highcpu-4"
       node_locations     = "us-central1-c"
       auto_scaling       = false              # Make sure to set min/max count if you change this
       node_count         = 4

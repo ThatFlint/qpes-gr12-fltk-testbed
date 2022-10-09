@@ -75,31 +75,36 @@ class SimpleMnist(SimpleNet):  # pylint: disable=missing-class-docstring
         return F.log_softmax(x, dim=1)
 
 
-# LeNet-5 for MNIST, as per https://github.com/erykml/medium_articles/blob/master/Computer%20Vision/lenet5_pytorch.ipynb
+# LeNet-5 for MNIST, as per https://github.com/ChawDoe/LeNet5-MNIST-PyTorch/blob/master/model.py
 class Lenet5(SimpleNet):  # pylint: disable=missing-class-docstring
     def __init__(self, name=None, created_time=None):
         super(Lenet5, self).__init__(name, created_time)
 
-        self.feature_extractor = torch.nn.Sequential(
-            torch.nn.Conv2d(in_channels=1, out_channels=6, kernel_size=5, stride=1),
-            torch.nn.Tanh(),
-            torch.nn.AvgPool2d(kernel_size=2),
-            torch.nn.Conv2d(in_channels=6, out_channels=16, kernel_size=5, stride=1),
-            torch.nn.Tanh(),
-            torch.nn.AvgPool2d(kernel_size=2),
-            torch.nn.Conv2d(in_channels=16, out_channels=120, kernel_size=5, stride=1),
-            torch.nn.Tanh()
-        )
-
-        self.classifier = torch.nn.Sequential(
-            torch.nn.Linear(in_features=120, out_features=84),
-            torch.nn.Tanh(),
-            torch.nn.Linear(in_features=84, out_features=10)
-        )
+        self.conv1 = torch.nn.Conv2d(1, 6, 5)
+        self.relu1 = torch.nn.ReLU()
+        self.pool1 = torch.nn.MaxPool2d(2)
+        self.conv2 = torch.nn.Conv2d(6, 16, 5)
+        self.relu2 = torch.nn.ReLU()
+        self.pool2 = torch.nn.MaxPool2d(2)
+        self.fc1 = torch.nn.Linear(256, 120)
+        self.relu3 = torch.nn.ReLU()
+        self.fc2 = torch.nn.Linear(120, 84)
+        self.relu4 = torch.nn.ReLU()
+        self.fc3 = torch.nn.Linear(84, 10)
+        self.relu5 = torch.nn.ReLU()
 
     def forward(self, x): # pylint: disable=missing-function-docstring
-        x = self.feature_extractor(x)
-        x = torch.flatten(x, 1)
-        logits = self.classifier(x)
-        probs = F.softmax(logits, dim=1)
-        return logits, probs
+        y = self.conv1(x)
+        y = self.relu1(y)
+        y = self.pool1(y)
+        y = self.conv2(y)
+        y = self.relu2(y)
+        y = self.pool2(y)
+        y = y.view(y.shape[0], -1)
+        y = self.fc1(y)
+        y = self.relu3(y)
+        y = self.fc2(y)
+        y = self.relu4(y)
+        y = self.fc3(y)
+        y = self.relu5(y)
+        return y

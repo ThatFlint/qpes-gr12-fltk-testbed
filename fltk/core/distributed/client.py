@@ -208,6 +208,7 @@ class DistClient(DistNode):
         See also the EpochData dataclass.
         @rtype: List[EpochData]
         """
+        self._logger.info(f'Starting training of model {self.learning_params.model} with batch size {self.learning_params.batch_size} and max epochs {self.learning_params.max_epoch}.')
         max_epoch = self.learning_params.max_epoch + 1
         start_time_train = datetime.datetime.now()
         epoch_results = []

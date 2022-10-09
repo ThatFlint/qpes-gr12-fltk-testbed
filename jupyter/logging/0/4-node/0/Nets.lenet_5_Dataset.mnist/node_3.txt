@@ -1,0 +1,1187 @@
+10-08-2022 13:29:18 root         INFO     Loading file config/configuration.fltk.json
+10-08-2022 13:29:18 root         INFO     Starting in client mode
+10-08-2022 13:29:18 root         INFO     Starting with host=trainjob-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c-master-0 and port=23456
+10-08-2022 13:29:18 root         INFO     Initializing backend for training process: gloo
+10-08-2022 13:29:18 torch.distributed.distributed_c10d INFO     Added key: store_based_barrier_key:1 to store for rank: 3
+10-08-2022 13:29:18 torch.distributed.distributed_c10d INFO     Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+10-08-2022 13:29:18 root         INFO     Starting Creating client with 3
+10-08-2022 13:29:18 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     Initializing learning client
+10-08-2022 13:29:18 root         INFO     Getting net: Nets.lenet_5
+10-08-2022 13:29:18 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     Preparing learner model with distributed=True
+10-08-2022 13:29:19 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     Starting training of model Nets.lenet_5 with batch size 128 and max epochs 80.
+10-08-2022 13:29:20 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [1,     0] loss: 0.046
+10-08-2022 13:29:20 torch.nn.parallel.distributed INFO     Reducer buckets have been rebuilt in this iteration.
+10-08-2022 13:29:24 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [1,    50] loss: 2.288
+10-08-2022 13:29:28 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [1,   100] loss: 2.100
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:29:30 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [2,     0] loss: 0.040
+10-08-2022 13:29:34 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [2,    50] loss: 1.642
+10-08-2022 13:29:37 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [2,   100] loss: 1.494
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:29:40 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [3,     0] loss: 0.030
+10-08-2022 13:29:43 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [3,    50] loss: 1.271
+10-08-2022 13:29:47 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [3,   100] loss: 1.170
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:29:49 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [4,     0] loss: 0.025
+10-08-2022 13:29:53 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [4,    50] loss: 1.047
+10-08-2022 13:29:56 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [4,   100] loss: 0.992
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:29:58 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [5,     0] loss: 0.023
+10-08-2022 13:30:02 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [5,    50] loss: 0.960
+10-08-2022 13:30:05 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [5,   100] loss: 0.930
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:30:07 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [6,     0] loss: 0.022
+10-08-2022 13:30:11 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [6,    50] loss: 0.910
+10-08-2022 13:30:15 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [6,   100] loss: 0.889
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:30:17 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [7,     0] loss: 0.021
+10-08-2022 13:30:21 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [7,    50] loss: 0.878
+10-08-2022 13:30:24 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [7,   100] loss: 0.863
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:30:27 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [8,     0] loss: 0.020
+10-08-2022 13:30:30 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [8,    50] loss: 0.851
+10-08-2022 13:30:34 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [8,   100] loss: 0.842
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:30:36 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [9,     0] loss: 0.020
+10-08-2022 13:30:40 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [9,    50] loss: 0.828
+10-08-2022 13:30:43 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [9,   100] loss: 0.826
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:30:46 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [10,     0] loss: 0.020
+10-08-2022 13:30:50 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [10,    50] loss: 0.810
+10-08-2022 13:30:53 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [10,   100] loss: 0.808
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:30:56 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [11,     0] loss: 0.020
+10-08-2022 13:31:00 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [11,    50] loss: 0.792
+10-08-2022 13:31:03 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [11,   100] loss: 0.794
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:31:06 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [12,     0] loss: 0.020
+10-08-2022 13:31:09 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [12,    50] loss: 0.776
+10-08-2022 13:31:13 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [12,   100] loss: 0.780
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:31:15 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [13,     0] loss: 0.020
+10-08-2022 13:31:19 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [13,    50] loss: 0.761
+10-08-2022 13:31:23 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [13,   100] loss: 0.769
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:31:25 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [14,     0] loss: 0.019
+10-08-2022 13:31:29 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [14,    50] loss: 0.751
+10-08-2022 13:31:32 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [14,   100] loss: 0.757
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:31:35 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [15,     0] loss: 0.019
+10-08-2022 13:31:38 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [15,    50] loss: 0.741
+10-08-2022 13:31:42 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [15,   100] loss: 0.749
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:31:44 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [16,     0] loss: 0.019
+10-08-2022 13:31:48 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [16,    50] loss: 0.730
+10-08-2022 13:31:51 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [16,   100] loss: 0.739
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:31:54 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [17,     0] loss: 0.018
+10-08-2022 13:31:57 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [17,    50] loss: 0.721
+10-08-2022 13:32:01 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [17,   100] loss: 0.732
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:32:04 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [18,     0] loss: 0.018
+10-08-2022 13:32:07 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [18,    50] loss: 0.713
+10-08-2022 13:32:11 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [18,   100] loss: 0.722
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:32:13 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [19,     0] loss: 0.017
+10-08-2022 13:32:17 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [19,    50] loss: 0.703
+10-08-2022 13:32:20 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [19,   100] loss: 0.714
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:32:23 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [20,     0] loss: 0.017
+10-08-2022 13:32:26 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [20,    50] loss: 0.698
+10-08-2022 13:32:30 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [20,   100] loss: 0.707
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:32:32 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [21,     0] loss: 0.017
+10-08-2022 13:32:36 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [21,    50] loss: 0.688
+10-08-2022 13:32:40 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [21,   100] loss: 0.704
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:32:42 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [22,     0] loss: 0.016
+10-08-2022 13:32:46 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [22,    50] loss: 0.681
+10-08-2022 13:32:49 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [22,   100] loss: 0.689
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:32:52 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [23,     0] loss: 0.016
+10-08-2022 13:32:55 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [23,    50] loss: 0.685
+10-08-2022 13:32:59 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [23,   100] loss: 0.683
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:33:01 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [24,     0] loss: 0.016
+10-08-2022 13:33:05 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [24,    50] loss: 0.670
+10-08-2022 13:33:09 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [24,   100] loss: 0.680
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:33:11 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [25,     0] loss: 0.011
+10-08-2022 13:33:15 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [25,    50] loss: 0.491
+10-08-2022 13:33:18 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [25,   100] loss: 0.476
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:33:20 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [26,     0] loss: 0.010
+10-08-2022 13:33:24 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [26,    50] loss: 0.457
+10-08-2022 13:33:28 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [26,   100] loss: 0.457
+/opt/federation-lab/fltk/nets/util/evaluation.py:8: RuntimeWarning: invalid value encountered in true_divide
+  return np.diagonal(conf_mat) / np.sum(conf_mat, axis=0)
+10-08-2022 13:33:30 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [27,     0] loss: 0.010
+10-08-2022 13:33:34 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [27,    50] loss: 0.328
+10-08-2022 13:33:37 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [27,   100] loss: 0.266
+10-08-2022 13:33:40 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [28,     0] loss: 0.006
+10-08-2022 13:33:43 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [28,    50] loss: 0.254
+10-08-2022 13:33:47 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [28,   100] loss: 0.235
+10-08-2022 13:33:49 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [29,     0] loss: 0.005
+10-08-2022 13:33:53 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [29,    50] loss: 0.233
+10-08-2022 13:33:57 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [29,   100] loss: 0.216
+10-08-2022 13:33:59 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [30,     0] loss: 0.005
+10-08-2022 13:34:03 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [30,    50] loss: 0.230
+10-08-2022 13:34:06 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [30,   100] loss: 0.209
+10-08-2022 13:34:08 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [31,     0] loss: 0.004
+10-08-2022 13:34:12 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [31,    50] loss: 0.215
+10-08-2022 13:34:16 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [31,   100] loss: 0.196
+10-08-2022 13:34:18 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [32,     0] loss: 0.004
+10-08-2022 13:34:22 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [32,    50] loss: 0.200
+10-08-2022 13:34:25 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [32,   100] loss: 0.190
+10-08-2022 13:34:27 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [33,     0] loss: 0.003
+10-08-2022 13:34:31 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [33,    50] loss: 0.179
+10-08-2022 13:34:35 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [33,   100] loss: 0.181
+10-08-2022 13:34:37 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [34,     0] loss: 0.003
+10-08-2022 13:34:41 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [34,    50] loss: 0.195
+10-08-2022 13:34:44 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [34,   100] loss: 0.178
+10-08-2022 13:34:47 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [35,     0] loss: 0.003
+10-08-2022 13:34:50 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [35,    50] loss: 0.166
+10-08-2022 13:34:54 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [35,   100] loss: 0.166
+10-08-2022 13:34:57 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [36,     0] loss: 0.003
+10-08-2022 13:35:00 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [36,    50] loss: 0.171
+10-08-2022 13:35:04 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [36,   100] loss: 0.165
+10-08-2022 13:35:06 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [37,     0] loss: 0.003
+10-08-2022 13:35:10 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [37,    50] loss: 0.163
+10-08-2022 13:35:14 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [37,   100] loss: 0.148
+10-08-2022 13:35:16 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [38,     0] loss: 0.003
+10-08-2022 13:35:20 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [38,    50] loss: 0.167
+10-08-2022 13:35:23 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [38,   100] loss: 0.150
+10-08-2022 13:35:26 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [39,     0] loss: 0.002
+10-08-2022 13:35:30 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [39,    50] loss: 0.167
+10-08-2022 13:35:33 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [39,   100] loss: 0.128
+10-08-2022 13:35:36 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [40,     0] loss: 0.018
+10-08-2022 13:35:39 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [40,    50] loss: 0.191
+10-08-2022 13:35:43 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [40,   100] loss: 0.137
+10-08-2022 13:35:45 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [41,     0] loss: 0.003
+10-08-2022 13:35:49 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [41,    50] loss: 0.130
+10-08-2022 13:35:53 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [41,   100] loss: 0.116
+10-08-2022 13:35:55 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [42,     0] loss: 0.002
+10-08-2022 13:35:59 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [42,    50] loss: 0.156
+10-08-2022 13:36:02 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [42,   100] loss: 0.116
+10-08-2022 13:36:05 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [43,     0] loss: 0.002
+10-08-2022 13:36:08 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [43,    50] loss: 0.177
+10-08-2022 13:36:12 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [43,   100] loss: 0.105
+10-08-2022 13:36:14 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [44,     0] loss: 0.002
+10-08-2022 13:36:18 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [44,    50] loss: 0.146
+10-08-2022 13:36:22 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [44,   100] loss: 0.105
+10-08-2022 13:36:24 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [45,     0] loss: 0.002
+10-08-2022 13:36:28 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [45,    50] loss: 0.114
+10-08-2022 13:36:32 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [45,   100] loss: 0.094
+10-08-2022 13:36:34 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [46,     0] loss: 0.002
+10-08-2022 13:36:38 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [46,    50] loss: 0.110
+10-08-2022 13:36:41 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [46,   100] loss: 0.086
+10-08-2022 13:36:44 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [47,     0] loss: 0.003
+10-08-2022 13:36:47 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [47,    50] loss: 0.122
+10-08-2022 13:36:51 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [47,   100] loss: 0.093
+10-08-2022 13:36:53 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [48,     0] loss: 0.002
+10-08-2022 13:36:57 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [48,    50] loss: 0.103
+10-08-2022 13:37:01 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [48,   100] loss: 0.113
+10-08-2022 13:37:03 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [49,     0] loss: 0.002
+10-08-2022 13:37:07 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [49,    50] loss: 0.088
+10-08-2022 13:37:11 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [49,   100] loss: 0.107
+10-08-2022 13:37:13 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [50,     0] loss: 0.002
+10-08-2022 13:37:17 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [50,    50] loss: 0.093
+10-08-2022 13:37:20 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [50,   100] loss: 0.098
+10-08-2022 13:37:23 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [51,     0] loss: 0.002
+10-08-2022 13:37:26 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [51,    50] loss: 0.086
+10-08-2022 13:37:30 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [51,   100] loss: 0.067
+10-08-2022 13:37:32 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [52,     0] loss: 0.001
+10-08-2022 13:37:36 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [52,    50] loss: 0.065
+10-08-2022 13:37:40 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [52,   100] loss: 0.057
+10-08-2022 13:37:42 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [53,     0] loss: 0.001
+10-08-2022 13:37:46 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [53,    50] loss: 0.058
+10-08-2022 13:37:49 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [53,   100] loss: 0.051
+10-08-2022 13:37:52 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [54,     0] loss: 0.001
+10-08-2022 13:37:55 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [54,    50] loss: 0.054
+10-08-2022 13:37:59 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [54,   100] loss: 0.046
+10-08-2022 13:38:01 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [55,     0] loss: 0.001
+10-08-2022 13:38:05 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [55,    50] loss: 0.049
+10-08-2022 13:38:09 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [55,   100] loss: 0.043
+10-08-2022 13:38:11 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [56,     0] loss: 0.001
+10-08-2022 13:38:15 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [56,    50] loss: 0.046
+10-08-2022 13:38:19 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [56,   100] loss: 0.040
+10-08-2022 13:38:21 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [57,     0] loss: 0.001
+10-08-2022 13:38:25 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [57,    50] loss: 0.043
+10-08-2022 13:38:28 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [57,   100] loss: 0.038
+10-08-2022 13:38:30 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [58,     0] loss: 0.001
+10-08-2022 13:38:34 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [58,    50] loss: 0.041
+10-08-2022 13:38:38 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [58,   100] loss: 0.036
+10-08-2022 13:38:40 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [59,     0] loss: 0.001
+10-08-2022 13:38:44 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [59,    50] loss: 0.039
+10-08-2022 13:38:48 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [59,   100] loss: 0.034
+10-08-2022 13:38:50 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [60,     0] loss: 0.001
+10-08-2022 13:38:54 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [60,    50] loss: 0.037
+10-08-2022 13:38:58 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [60,   100] loss: 0.032
+10-08-2022 13:39:00 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [61,     0] loss: 0.000
+10-08-2022 13:39:04 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [61,    50] loss: 0.034
+10-08-2022 13:39:07 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [61,   100] loss: 0.030
+10-08-2022 13:39:09 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [62,     0] loss: 0.000
+10-08-2022 13:39:13 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [62,    50] loss: 0.033
+10-08-2022 13:39:17 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [62,   100] loss: 0.028
+10-08-2022 13:39:19 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [63,     0] loss: 0.000
+10-08-2022 13:39:23 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [63,    50] loss: 0.031
+10-08-2022 13:39:26 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [63,   100] loss: 0.026
+10-08-2022 13:39:29 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [64,     0] loss: 0.000
+10-08-2022 13:39:33 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [64,    50] loss: 0.029
+10-08-2022 13:39:36 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [64,   100] loss: 0.025
+10-08-2022 13:39:39 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [65,     0] loss: 0.000
+10-08-2022 13:39:42 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [65,    50] loss: 0.028
+10-08-2022 13:39:46 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [65,   100] loss: 0.023
+10-08-2022 13:39:48 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [66,     0] loss: 0.000
+10-08-2022 13:39:52 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [66,    50] loss: 0.026
+10-08-2022 13:39:56 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [66,   100] loss: 0.022
+10-08-2022 13:39:58 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [67,     0] loss: 0.000
+10-08-2022 13:40:02 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [67,    50] loss: 0.025
+10-08-2022 13:40:05 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [67,   100] loss: 0.021
+10-08-2022 13:40:08 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [68,     0] loss: 0.000
+10-08-2022 13:40:12 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [68,    50] loss: 0.024
+10-08-2022 13:40:15 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [68,   100] loss: 0.020
+10-08-2022 13:40:18 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [69,     0] loss: 0.000
+10-08-2022 13:40:21 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [69,    50] loss: 0.024
+10-08-2022 13:40:25 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [69,   100] loss: 0.019
+10-08-2022 13:40:27 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [70,     0] loss: 0.000
+10-08-2022 13:40:31 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [70,    50] loss: 0.021
+10-08-2022 13:40:35 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [70,   100] loss: 0.018
+10-08-2022 13:40:37 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [71,     0] loss: 0.000
+10-08-2022 13:40:41 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [71,    50] loss: 0.020
+10-08-2022 13:40:44 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [71,   100] loss: 0.017
+10-08-2022 13:40:47 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [72,     0] loss: 0.000
+10-08-2022 13:40:50 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [72,    50] loss: 0.019
+10-08-2022 13:40:54 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [72,   100] loss: 0.016
+10-08-2022 13:40:56 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [73,     0] loss: 0.000
+10-08-2022 13:41:00 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [73,    50] loss: 0.019
+10-08-2022 13:41:04 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [73,   100] loss: 0.015
+10-08-2022 13:41:06 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [74,     0] loss: 0.000
+10-08-2022 13:41:10 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [74,    50] loss: 0.018
+10-08-2022 13:41:13 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [74,   100] loss: 0.014
+10-08-2022 13:41:16 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [75,     0] loss: 0.000
+10-08-2022 13:41:19 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [75,    50] loss: 0.019
+10-08-2022 13:41:23 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [75,   100] loss: 0.071
+10-08-2022 13:41:26 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [76,     0] loss: 0.001
+10-08-2022 13:41:29 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [76,    50] loss: 0.048
+10-08-2022 13:41:33 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [76,   100] loss: 0.033
+10-08-2022 13:41:35 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [77,     0] loss: 0.000
+10-08-2022 13:41:39 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [77,    50] loss: 0.026
+10-08-2022 13:41:42 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [77,   100] loss: 0.019
+10-08-2022 13:41:45 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [78,     0] loss: 0.000
+10-08-2022 13:41:48 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [78,    50] loss: 0.020
+10-08-2022 13:41:52 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [78,   100] loss: 0.015
+10-08-2022 13:41:54 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [79,     0] loss: 0.000
+10-08-2022 13:41:58 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [79,    50] loss: 0.016
+10-08-2022 13:42:02 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [79,   100] loss: 0.014
+10-08-2022 13:42:04 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [80,     0] loss: 0.000
+10-08-2022 13:42:08 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [80,    50] loss: 0.015
+10-08-2022 13:42:11 Client-3-7f8770e3-9f9c-4dac-9a16-b2af5f6ed56c INFO     [80,   100] loss: 0.013
+No argument path is provided.
+[EpochData(epoch_id=1, num_epochs=81, duration_train=9789, duration_test=757, loss_train=2.099547564983368, accuracy=36.64, loss=37.42074751853943, class_precision=array([0.        ,        nan,        nan, 0.22742111,        nan,
+       0.44393593, 0.23341523, 0.58701299,        nan, 0.55172414]), class_recall=array([0.        , 0.        , 0.        , 0.94570136, 0.        ,
+       0.72932331, 0.37109375, 0.91497976, 0.        , 0.73846154]), confusion_mat=array([[  0,   0,   0, 209,   0,  15,  18,   2,   0,   4],
+       [  0,   0,   0, 219,   0,  10,   3,   0,   0,   1],
+       [  0,   0,   0,  69,   0,  38, 140,   6,   0,   5],
+       [  0,   0,   0, 209,   0,   9,   1,   0,   0,   2],
+       [  1,   0,   0,  95,   0,  19, 132,   2,   0,   5],
+       [  0,   0,   0,   0,   0, 194,   0,  59,   0,  13],
+       [  1,   0,   0, 111,   0,  46,  95,   3,   0,   0],
+       [  0,   0,   0,   0,   0,  17,   0, 226,   0,   4],
+       [  2,   0,   0,   7,   0,  56,  18,  52,   0, 122],
+       [  0,   0,   0,   0,   0,  33,   0,  35,   0, 192]])), EpochData(epoch_id=2, num_epochs=81, duration_train=19365, duration_test=753, loss_train=1.4943374609947204, accuracy=47.36, loss=29.332468271255493, class_precision=array([0.53353659,        nan,        nan, 0.49748744,        nan,
+       0.45138889, 0.22064516, 0.85152838,        nan, 0.95360825]), class_recall=array([0.70564516, 0.        , 0.        , 0.8959276 , 0.        ,
+       0.97744361, 0.66796875, 0.78947368, 0.        , 0.71153846]), confusion_mat=array([[175,   0,   0,  36,   0,   4,  33,   0,   0,   0],
+       [ 25,   0,   0,  85,   0, 109,  14,   0,   0,   0],
+       [  6,   0,   0,   7,   0,   6, 239,   0,   0,   0],
+       [  4,   0,   0, 198,   0,   3,  16,   0,   0,   0],
+       [  3,   0,   0,  29,   0,   7, 215,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 260,   0,   5,   0,   1],
+       [ 48,   0,   0,  28,   0,   9, 171,   0,   0,   0],
+       [  0,   0,   0,   0,   0,  44,   0, 195,   0,   8],
+       [ 67,   0,   0,  14,   0,  85,  87,   4,   0,   0],
+       [  0,   0,   0,   1,   0,  49,   0,  25,   0, 185]])), EpochData(epoch_id=3, num_epochs=81, duration_train=29052, duration_test=760, loss_train=1.1704731130599975, accuracy=58.0, loss=23.537389278411865, class_precision=array([0.6828479 , 0.97222222,        nan, 0.74493927, 0.19607843,
+       0.612529  , 0.24675325, 0.88793103,        nan, 0.97619048]), class_recall=array([0.85080645, 0.90128755, 0.        , 0.83257919, 0.15748031,
+       0.9924812 , 0.66796875, 0.8340081 , 0.        , 0.63076923]), confusion_mat=array([[211,   0,   0,   8,   1,   4,  24,   0,   0,   0],
+       [  0, 210,   0,  15,   6,   1,   1,   0,   0,   0],
+       [  7,   0,   0,   7,  13,   2, 229,   0,   0,   0],
+       [ 15,   2,   0, 184,   1,   0,  19,   0,   0,   0],
+       [  1,   3,   0,  21,  40,   3, 186,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 264,   0,   2,   0,   0],
+       [ 71,   1,   0,   6,   5,   2, 171,   0,   0,   0],
+       [  0,   0,   0,   0,   0,  37,   0, 206,   0,   4],
+       [  4,   0,   0,   6, 138,  41,  63,   5,   0,   0],
+       [  0,   0,   0,   0,   0,  77,   0,  19,   0, 164]])), EpochData(epoch_id=4, num_epochs=81, duration_train=38163, duration_test=761, loss_train=0.9920295715332031, accuracy=60.52, loss=22.010371267795563, class_precision=array([0.46391753, 0.96035242,        nan, 0.8547486 , 0.77083333,
+       0.57391304, 0.27333333, 0.90254237,        nan, 0.97633136]), class_recall=array([0.90725806, 0.93562232, 0.        , 0.69230769, 0.43700787,
+       0.9924812 , 0.640625  , 0.86234818, 0.        , 0.63461538]), confusion_mat=array([[225,   0,   0,   2,   1,   3,  17,   0,   0,   0],
+       [  4, 218,   0,   6,   2,   1,   2,   0,   0,   0],
+       [ 14,   0,   0,   4,  15,   8, 217,   0,   0,   0],
+       [ 40,   3,   0, 153,   1,   0,  24,   0,   0,   0],
+       [  5,   5,   0,   9, 111,   3, 121,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 264,   0,   1,   0,   1],
+       [ 75,   1,   0,   4,  10,   2, 164,   0,   0,   0],
+       [  0,   0,   0,   0,   0,  31,   0, 213,   0,   3],
+       [122,   0,   0,   1,   4,  69,  55,   6,   0,   0],
+       [  0,   0,   0,   0,   0,  79,   0,  16,   0, 165]])), EpochData(epoch_id=5, num_epochs=81, duration_train=47351, duration_test=762, loss_train=0.9298678886890411, accuracy=63.76, loss=20.23879987001419, class_precision=array([0.45228216, 0.95217391,        nan, 0.87567568, 0.69777778,
+       0.63834951, 0.31870229, 0.88934426,        nan, 0.96464646]), class_recall=array([0.87903226, 0.93991416, 0.        , 0.73303167, 0.61811024,
+       0.9887218 , 0.65234375, 0.87854251, 0.        , 0.73461538]), confusion_mat=array([[218,   0,   0,   2,   1,   3,  24,   0,   0,   0],
+       [  3, 219,   0,   6,   3,   1,   1,   0,   0,   0],
+       [ 18,   2,   0,   3,  39,  12, 184,   0,   0,   0],
+       [ 32,   4,   0, 162,   2,   0,  21,   0,   0,   0],
+       [  3,   5,   0,   8, 157,   2,  79,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 263,   0,   2,   0,   1],
+       [ 69,   0,   0,   3,  15,   2, 167,   0,   0,   0],
+       [  0,   0,   0,   0,   0,  24,   0, 217,   0,   6],
+       [139,   0,   0,   1,   8,  51,  48,  10,   0,   0],
+       [  0,   0,   0,   0,   0,  54,   0,  15,   0, 191]])), EpochData(epoch_id=6, num_epochs=81, duration_train=56758, duration_test=760, loss_train=0.8889687466621399, accuracy=66.08, loss=19.00880378484726, class_precision=array([0.41616162, 0.96888889,        nan, 0.86979167, 0.70869565,
+       0.78143713, 0.34007353, 0.93220339,        nan, 0.95081967]), class_recall=array([0.83064516, 0.93562232, 0.        , 0.75565611, 0.64173228,
+       0.98120301, 0.72265625, 0.89068826, 0.        , 0.89230769]), confusion_mat=array([[206,   0,   0,   3,   0,   3,  36,   0,   0,   0],
+       [  3, 218,   0,   7,   3,   1,   1,   0,   0,   0],
+       [ 37,   1,   0,   3,  37,   2, 178,   0,   0,   0],
+       [ 20,   4,   0, 167,   4,   0,  26,   0,   0,   0],
+       [  3,   2,   0,   7, 163,   2,  77,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 261,   0,   2,   0,   3],
+       [ 50,   0,   0,   4,  16,   1, 185,   0,   0,   0],
+       [  0,   0,   0,   0,   0,  18,   0, 220,   0,   9],
+       [176,   0,   0,   1,   7,  27,  41,   5,   0,   0],
+       [  0,   0,   0,   0,   0,  19,   0,   9,   0, 232]])), EpochData(epoch_id=7, num_epochs=81, duration_train=66384, duration_test=821, loss_train=0.863162271976471, accuracy=67.08, loss=18.28677225112915, class_precision=array([0.3957115 , 0.96086957,        nan, 0.88324873, 0.69105691,
+       0.82428115, 0.37080868, 0.92975207,        nan, 0.94444444]), class_recall=array([0.81854839, 0.94849785, 0.        , 0.78733032, 0.66929134,
+       0.96992481, 0.734375  , 0.91093117, 0.        , 0.91538462]), confusion_mat=array([[203,   0,   0,   2,   1,   2,  40,   0,   0,   0],
+       [  1, 221,   0,   6,   3,   0,   2,   0,   0,   0],
+       [ 50,   2,   0,   4,  42,   4, 155,   0,   0,   1],
+       [ 16,   4,   0, 174,   4,   0,  23,   0,   0,   0],
+       [  4,   3,   0,   7, 170,   1,  69,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   5,   0,   3],
+       [ 46,   0,   0,   3,  18,   1, 188,   0,   0,   0],
+       [  0,   0,   0,   0,   0,  12,   0, 225,   0,  10],
+       [193,   0,   0,   1,   8,  21,  30,   4,   0,   0],
+       [  0,   0,   0,   0,   0,  14,   0,   8,   0, 238]])), EpochData(epoch_id=8, num_epochs=81, duration_train=75956, duration_test=760, loss_train=0.8420032727718353, accuracy=67.72, loss=17.87818545103073, class_precision=array([0.40466102, 0.9650655 ,        nan, 0.84018265, 0.66044776,
+       0.84262295, 0.38627451, 0.93469388,        nan, 0.94047619]), class_recall=array([0.77016129, 0.94849785, 0.        , 0.83257919, 0.69685039,
+       0.96616541, 0.76953125, 0.92712551, 0.        , 0.91153846]), confusion_mat=array([[191,   0,   0,   6,   1,   2,  48,   0,   0,   0],
+       [  0, 221,   0,   8,   3,   0,   1,   0,   0,   0],
+       [ 52,   3,   0,   5,  51,   5, 141,   0,   0,   1],
+       [  7,   3,   0, 184,   4,   0,  23,   0,   0,   0],
+       [  4,   2,   0,   9, 177,   0,  62,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   5,   0,   4],
+       [ 33,   0,   0,   5,  20,   1, 197,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   8,   0, 229,   0,  10],
+       [185,   0,   0,   2,  12,  18,  38,   2,   0,   0],
+       [  0,   0,   0,   0,   0,  14,   0,   9,   0, 237]])), EpochData(epoch_id=9, num_epochs=81, duration_train=85673, duration_test=755, loss_train=0.8256429862976075, accuracy=68.28, loss=17.550492882728577, class_precision=array([0.38979592, 0.96943231,        nan, 0.84234234, 0.65693431,
+       0.86241611, 0.41030928, 0.928     ,        nan, 0.9484127 ]), class_recall=array([0.77016129, 0.9527897 , 0.        , 0.84615385, 0.70866142,
+       0.96616541, 0.77734375, 0.93927126, 0.        , 0.91923077]), confusion_mat=array([[191,   0,   0,   6,   1,   2,  48,   0,   0,   0],
+       [  0, 222,   0,   7,   3,   0,   1,   0,   0,   0],
+       [ 64,   2,   0,   4,  54,   4, 129,   0,   0,   1],
+       [  5,   3,   0, 187,   5,   0,  21,   0,   0,   0],
+       [  5,   2,   0,   9, 180,   0,  58,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   5,   0,   4],
+       [ 32,   0,   0,   5,  20,   0, 199,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 232,   0,   8],
+       [193,   0,   0,   4,  11,  16,  29,   4,   0,   0],
+       [  0,   0,   0,   0,   0,  12,   0,   9,   0, 239]])), EpochData(epoch_id=10, num_epochs=81, duration_train=95672, duration_test=759, loss_train=0.8079825735092163, accuracy=68.8, loss=17.451979756355286, class_precision=array([0.40350877, 0.97356828,        nan, 0.83333333, 0.65972222,
+       0.88275862, 0.40438247, 0.92828685,        nan, 0.94186047]), class_recall=array([0.74193548, 0.94849785, 0.        , 0.85972851, 0.7480315 ,
+       0.96240602, 0.79296875, 0.94331984, 0.        , 0.93461538]), confusion_mat=array([[184,   0,   0,   7,   1,   1,  55,   0,   0,   0],
+       [  0, 221,   0,   8,   3,   0,   1,   0,   0,   0],
+       [ 55,   2,   0,   4,  57,   4, 135,   0,   0,   1],
+       [  3,   3,   0, 190,   5,   0,  20,   0,   0,   0],
+       [  4,   1,   0,   9, 190,   0,  50,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 256,   0,   6,   0,   4],
+       [ 29,   0,   0,   6,  18,   0, 203,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 233,   0,   8],
+       [181,   0,   0,   4,  14,  14,  38,   4,   0,   2],
+       [  0,   0,   0,   0,   0,   9,   0,   8,   0, 243]])), EpochData(epoch_id=11, num_epochs=81, duration_train=105684, duration_test=764, loss_train=0.7939817130565643, accuracy=69.24, loss=17.443143367767334, class_precision=array([0.40172786, 0.97787611,        nan, 0.84120172, 0.65743945,
+       0.88316151, 0.41666667, 0.92828685,        nan, 0.95294118]), class_recall=array([0.75      , 0.94849785, 0.        , 0.88687783, 0.7480315 ,
+       0.96616541, 0.80078125, 0.94331984, 0.        , 0.93461538]), confusion_mat=array([[186,   0,   0,   6,   1,   1,  54,   0,   0,   0],
+       [  0, 221,   0,   8,   3,   0,   1,   0,   0,   0],
+       [ 60,   2,   0,   4,  59,   3, 129,   0,   0,   1],
+       [  2,   2,   0, 196,   4,   0,  17,   0,   0,   0],
+       [  4,   1,   0,   9, 190,   0,  50,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   6,   0,   3],
+       [ 26,   0,   0,   6,  19,   0, 205,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 233,   0,   7],
+       [185,   0,   0,   4,  13,  14,  36,   4,   0,   1],
+       [  0,   0,   0,   0,   0,   9,   0,   8,   0, 243]])), EpochData(epoch_id=12, num_epochs=81, duration_train=115166, duration_test=780, loss_train=0.7804441678524018, accuracy=69.6, loss=17.1507026553154, class_precision=array([0.37804878, 0.97368421,        nan, 0.84549356, 0.64900662,
+       0.90175439, 0.44567627, 0.92885375,        nan, 0.9609375 ]), class_recall=array([0.75      , 0.9527897 , 0.        , 0.89140271, 0.77165354,
+       0.96616541, 0.78515625, 0.951417  , 0.        , 0.94615385]), confusion_mat=array([[186,   0,   0,   6,   1,   1,  54,   0,   0,   0],
+       [  0, 222,   0,   7,   3,   0,   1,   0,   0,   0],
+       [ 76,   3,   0,   4,  62,   1, 111,   0,   0,   1],
+       [  4,   2,   0, 197,   5,   0,  13,   0,   0,   0],
+       [  5,   1,   0,   9, 196,   0,  43,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   6,   0,   3],
+       [ 28,   0,   0,   6,  21,   0, 201,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 235,   0,   6],
+       [193,   0,   0,   4,  14,  14,  28,   4,   0,   0],
+       [  0,   0,   0,   0,   0,   6,   0,   8,   0, 246]])), EpochData(epoch_id=13, num_epochs=81, duration_train=124802, duration_test=803, loss_train=0.7692061996459961, accuracy=69.64, loss=17.082817375659943, class_precision=array([0.38655462, 0.97379913,        nan, 0.84322034, 0.65245902,
+       0.90492958, 0.43043478, 0.92857143,        nan, 0.95736434]), class_recall=array([0.74193548, 0.95708155, 0.        , 0.90045249, 0.78346457,
+       0.96616541, 0.7734375 , 0.94736842, 0.        , 0.95      ]), confusion_mat=array([[184,   0,   0,   8,   1,   1,  54,   0,   0,   0],
+       [  0, 223,   0,   6,   3,   0,   1,   0,   0,   0],
+       [ 72,   2,   0,   4,  60,   1, 118,   0,   0,   1],
+       [  1,   3,   0, 199,   5,   0,  13,   0,   0,   0],
+       [  5,   1,   0,   9, 199,   0,  40,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   6,   0,   3],
+       [ 30,   0,   0,   6,  22,   0, 198,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 234,   0,   7],
+       [184,   0,   0,   4,  15,  14,  36,   4,   0,   0],
+       [  0,   0,   0,   0,   0,   5,   0,   8,   0, 247]])), EpochData(epoch_id=14, num_epochs=81, duration_train=134454, duration_test=763, loss_train=0.7572837364673615, accuracy=69.68, loss=16.875450015068054, class_precision=array([0.38271605, 0.96536797,        nan, 0.85042735, 0.6516129 ,
+       0.91756272, 0.43333333, 0.932     ,        nan, 0.95384615]), class_recall=array([0.75      , 0.95708155, 0.        , 0.90045249, 0.79527559,
+       0.96240602, 0.76171875, 0.94331984, 0.        , 0.95384615]), confusion_mat=array([[186,   0,   0,   7,   1,   1,  53,   0,   0,   0],
+       [  0, 223,   0,   6,   3,   0,   1,   0,   0,   0],
+       [ 67,   3,   0,   3,  60,   1, 123,   0,   0,   1],
+       [  1,   3,   0, 199,   6,   0,  12,   0,   0,   0],
+       [  5,   2,   0,   9, 202,   0,  36,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 256,   0,   7,   0,   3],
+       [ 32,   0,   0,   6,  23,   0, 195,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 233,   0,   8],
+       [195,   0,   0,   4,  15,  11,  30,   2,   0,   0],
+       [  0,   0,   0,   0,   0,   4,   0,   8,   0, 248]])), EpochData(epoch_id=15, num_epochs=81, duration_train=144065, duration_test=753, loss_train=0.7485308957099914, accuracy=69.84, loss=16.77032035589218, class_precision=array([0.375     , 0.96536797,        nan, 0.84913793, 0.67785235,
+       0.91459075, 0.44292237, 0.936     ,        nan, 0.95736434]), class_recall=array([0.77419355, 0.95708155, 0.        , 0.89140271, 0.79527559,
+       0.96616541, 0.7578125 , 0.94736842, 0.        , 0.95      ]), confusion_mat=array([[192,   0,   0,   7,   1,   1,  47,   0,   0,   0],
+       [  0, 223,   0,   6,   3,   0,   1,   0,   0,   0],
+       [ 78,   3,   0,   3,  55,   1, 117,   0,   0,   1],
+       [  4,   3,   0, 197,   6,   0,  11,   0,   0,   0],
+       [  5,   2,   0,   9, 202,   0,  36,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   6,   0,   3],
+       [ 35,   0,   0,   6,  21,   0, 194,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 234,   0,   7],
+       [198,   0,   0,   4,  10,  12,  32,   1,   0,   0],
+       [  0,   0,   0,   0,   0,   4,   0,   9,   0, 247]])), EpochData(epoch_id=16, num_epochs=81, duration_train=153663, duration_test=754, loss_train=0.7389135539531708, accuracy=70.12, loss=16.59360283613205, class_precision=array([0.36279926, 0.96956522,        nan, 0.84255319, 0.69256757,
+       0.91166078, 0.47146402, 0.94331984,        nan, 0.94676806]), class_recall=array([0.79435484, 0.95708155, 0.        , 0.8959276 , 0.80708661,
+       0.96992481, 0.7421875 , 0.94331984, 0.        , 0.95769231]), confusion_mat=array([[197,   0,   0,   7,   1,   2,  41,   0,   0,   0],
+       [  0, 223,   0,   6,   3,   0,   1,   0,   0,   0],
+       [ 91,   2,   0,   4,  54,   1, 104,   0,   0,   2],
+       [  5,   3,   0, 198,   5,   0,  10,   0,   0,   0],
+       [  6,   2,   0,   9, 205,   0,  32,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   5,   0,   3],
+       [ 37,   0,   0,   6,  23,   0, 190,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 233,   0,   8],
+       [207,   0,   0,   5,   5,  12,  25,   2,   0,   1],
+       [  0,   0,   0,   0,   0,   4,   0,   7,   0, 249]])), EpochData(epoch_id=17, num_epochs=81, duration_train=163358, duration_test=763, loss_train=0.7319317495822907, accuracy=70.08, loss=16.619125366210938, class_precision=array([0.35650624, 0.96956522,        nan, 0.85714286, 0.71886121,
+       0.91489362, 0.4679803 , 0.94693878,        nan, 0.94318182]), class_recall=array([0.80645161, 0.95708155, 0.        , 0.8959276 , 0.79527559,
+       0.96992481, 0.7421875 , 0.93927126, 0.        , 0.95769231]), confusion_mat=array([[200,   0,   0,   5,   1,   2,  40,   0,   0,   0],
+       [  0, 223,   0,   6,   3,   0,   1,   0,   0,   0],
+       [102,   1,   0,   3,  44,   1, 106,   0,   0,   1],
+       [  4,   3,   0, 198,   4,   0,  12,   0,   0,   0],
+       [  7,   3,   0,   8, 202,   0,  34,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   5,   0,   3],
+       [ 39,   0,   0,   6,  21,   0, 190,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 232,   0,   9],
+       [209,   0,   0,   5,   6,  11,  23,   1,   0,   2],
+       [  0,   0,   0,   0,   0,   4,   0,   7,   0, 249]])), EpochData(epoch_id=18, num_epochs=81, duration_train=172969, duration_test=761, loss_train=0.7218703079223633, accuracy=70.12, loss=16.62687051296234, class_precision=array([0.35674677, 0.97807018,        nan, 0.84615385, 0.71777003,
+       0.91166078, 0.46778043, 0.94650206,        nan, 0.93962264]), class_recall=array([0.77822581, 0.95708155, 0.        , 0.8959276 , 0.81102362,
+       0.96992481, 0.765625  , 0.93117409, 0.        , 0.95769231]), confusion_mat=array([[193,   0,   0,   6,   1,   2,  46,   0,   0,   0],
+       [  0, 223,   0,   6,   3,   0,   1,   0,   0,   0],
+       [ 97,   0,   0,   5,  46,   2, 107,   0,   0,   1],
+       [  3,   3,   0, 198,   5,   0,  12,   0,   0,   0],
+       [  7,   2,   0,   8, 206,   0,  31,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   5,   0,   3],
+       [ 33,   0,   0,   6,  21,   0, 196,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 230,   0,  10],
+       [208,   0,   0,   5,   5,  10,  26,   1,   0,   2],
+       [  0,   0,   0,   0,   0,   4,   0,   7,   0, 249]])), EpochData(epoch_id=19, num_epochs=81, duration_train=182649, duration_test=770, loss_train=0.7139546167850495, accuracy=70.16, loss=16.64487260580063, class_precision=array([0.3447099 , 0.96536797,        nan, 0.85042735, 0.74538745,
+       0.91489362, 0.4961039 , 0.93902439,        nan, 0.93584906]), class_recall=array([0.81451613, 0.95708155, 0.        , 0.90045249, 0.79527559,
+       0.96992481, 0.74609375, 0.93522267, 0.        , 0.95384615]), confusion_mat=array([[202,   0,   0,   6,   0,   2,  38,   0,   0,   0],
+       [  1, 223,   0,   6,   2,   0,   1,   0,   0,   0],
+       [117,   0,   0,   5,  40,   3,  91,   0,   0,   2],
+       [  3,   4,   0, 199,   4,   0,  10,   0,   0,   1],
+       [  9,   3,   0,   8, 202,   0,  32,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   5,   0,   3],
+       [ 38,   1,   0,   5,  21,   0, 191,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 231,   0,   9],
+       [216,   0,   0,   5,   2,   8,  22,   2,   0,   2],
+       [  0,   0,   0,   0,   0,   4,   0,   8,   0, 248]])), EpochData(epoch_id=20, num_epochs=81, duration_train=192261, duration_test=751, loss_train=0.7071282160282135, accuracy=70.76, loss=16.734102845191956, class_precision=array([0.3655303 , 0.97379913,        nan, 0.85407725, 0.72791519,
+       0.92170819, 0.47368421, 0.9623431 ,        nan, 0.93333333]), class_recall=array([0.77822581, 0.95708155, 0.        , 0.90045249, 0.81102362,
+       0.97368421, 0.80859375, 0.93117409, 0.        , 0.96923077]), confusion_mat=array([[193,   0,   0,   5,   0,   2,  48,   0,   0,   0],
+       [  0, 223,   0,   6,   3,   0,   1,   0,   0,   0],
+       [ 92,   0,   0,   5,  46,   2, 112,   0,   0,   1],
+       [  2,   3,   0, 199,   4,   0,  12,   0,   0,   1],
+       [  6,   2,   0,   8, 206,   1,  31,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 259,   0,   4,   0,   3],
+       [ 25,   1,   0,   5,  18,   0, 207,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 230,   0,  10],
+       [210,   0,   0,   5,   6,   7,  26,   0,   0,   3],
+       [  0,   0,   0,   0,   0,   3,   0,   5,   0, 252]])), EpochData(epoch_id=21, num_epochs=81, duration_train=201859, duration_test=756, loss_train=0.7039907324314117, accuracy=70.24, loss=16.735091865062714, class_precision=array([0.34805654, 0.97807018,        nan, 0.84188034, 0.74452555,
+       0.91843972, 0.48522167, 0.96202532, 0.        , 0.92279412]), class_recall=array([0.79435484, 0.95708155, 0.        , 0.89140271, 0.80314961,
+       0.97368421, 0.76953125, 0.92307692, 0.        , 0.96538462]), confusion_mat=array([[197,   0,   0,   7,   0,   2,  42,   0,   0,   0],
+       [  1, 223,   0,   6,   2,   0,   1,   0,   0,   0],
+       [110,   0,   0,   5,  42,   2,  97,   0,   1,   1],
+       [  4,   2,   0, 197,   4,   0,  13,   0,   0,   1],
+       [  8,   2,   0,   8, 204,   1,  31,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 259,   0,   3,   0,   4],
+       [ 33,   1,   0,   6,  19,   0, 197,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 228,   0,  12],
+       [213,   0,   0,   5,   3,   8,  25,   0,   0,   3],
+       [  0,   0,   0,   0,   0,   3,   0,   6,   0, 251]])), EpochData(epoch_id=22, num_epochs=81, duration_train=211465, duration_test=764, loss_train=0.689276123046875, accuracy=70.52, loss=16.76760160923004, class_precision=array([0.35168739, 0.98672566,        nan, 0.85042735, 0.74275362,
+       0.91549296, 0.49014778, 0.96595745, 0.        , 0.91970803]), class_recall=array([0.7983871 , 0.95708155, 0.        , 0.90045249, 0.80708661,
+       0.97744361, 0.77734375, 0.91902834, 0.        , 0.96923077]), confusion_mat=array([[198,   0,   0,   5,   1,   2,  42,   0,   0,   0],
+       [  1, 223,   0,   6,   2,   0,   1,   0,   0,   0],
+       [107,   0,   0,   5,  42,   2,  99,   0,   2,   1],
+       [  3,   2,   0, 199,   4,   0,  12,   0,   0,   1],
+       [  8,   1,   0,   8, 205,   1,  31,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 260,   0,   3,   0,   3],
+       [ 31,   0,   0,   6,  19,   1, 199,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 227,   0,  13],
+       [215,   0,   0,   5,   3,   8,  22,   0,   0,   4],
+       [  0,   0,   0,   0,   0,   3,   0,   5,   0, 252]])), EpochData(epoch_id=23, num_epochs=81, duration_train=221092, duration_test=757, loss_train=0.6827071261405945, accuracy=70.4, loss=16.792509853839874, class_precision=array([0.34576271, 0.97379913,        nan, 0.84549356, 0.73684211,
+       0.92446043, 0.51212938, 0.95378151, 0.        , 0.91970803]), class_recall=array([0.82258065, 0.95708155, 0.        , 0.89140271, 0.82677165,
+       0.96616541, 0.7421875 , 0.91902834, 0.        , 0.96923077]), confusion_mat=array([[204,   0,   0,   6,   1,   2,  35,   0,   0,   0],
+       [  1, 223,   0,   6,   2,   0,   1,   0,   0,   0],
+       [117,   0,   0,   5,  41,   1,  91,   0,   2,   1],
+       [  3,   4,   0, 197,   4,   0,  12,   0,   0,   1],
+       [  8,   2,   0,   8, 210,   1,  25,   0,   0,   0],
+       [  1,   0,   0,   0,   0, 257,   0,   5,   0,   3],
+       [ 38,   0,   0,   6,  21,   1, 190,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 227,   0,  14],
+       [218,   0,   0,   5,   6,   7,  17,   1,   0,   3],
+       [  0,   0,   0,   0,   0,   3,   0,   5,   0, 252]])), EpochData(epoch_id=24, num_epochs=81, duration_train=230847, duration_test=756, loss_train=0.6804804146289826, accuracy=79.32, loss=14.032873570919037, class_precision=array([0.87677725, 0.99111111,        nan, 0.85281385, 0.74427481,
+       0.93189964, 0.46118721, 0.96929825, 0.69467787, 0.93680297]), class_recall=array([0.74596774, 0.95708155, 0.        , 0.89140271, 0.76771654,
+       0.97744361, 0.7890625 , 0.89473684, 0.96498054, 0.96923077]), confusion_mat=array([[185,   0,   0,   5,   1,   2,  48,   0,   7,   0],
+       [  0, 223,   0,   7,   1,   0,   1,   0,   1,   0],
+       [  4,   0,   0,   5,  41,   2, 126,   0,  80,   0],
+       [  1,   2,   0, 197,   5,   0,  15,   0,   1,   0],
+       [  0,   0,   0,   9, 195,   0,  41,   0,   9,   0],
+       [  0,   0,   0,   0,   0, 260,   0,   2,   1,   3],
+       [ 21,   0,   0,   6,  18,   0, 202,   0,   9,   0],
+       [  0,   0,   0,   0,   0,  11,   0, 221,   1,  14],
+       [  0,   0,   0,   2,   1,   1,   5,   0, 248,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   5,   0, 252]])), EpochData(epoch_id=25, num_epochs=81, duration_train=240461, duration_test=762, loss_train=0.4758581066131592, accuracy=80.32, loss=12.818047314882278, class_precision=array([0.6242236 , 0.96982759,        nan, 0.86725664, 0.71527778,
+       0.93548387, 0.52      , 0.96202532, 0.88447653, 0.95075758]), class_recall=array([0.81048387, 0.96566524, 0.        , 0.88687783, 0.81102362,
+       0.98120301, 0.76171875, 0.92307692, 0.95330739, 0.96538462]), confusion_mat=array([[201,   0,   0,   5,   1,   2,  34,   0,   5,   0],
+       [  1, 225,   0,   6,   1,   0,   0,   0,   0,   0],
+       [ 84,   2,   0,   4,  52,   2,  94,   0,  19,   1],
+       [  5,   2,   0, 196,   5,   0,  12,   0,   1,   0],
+       [  2,   2,   0,   7, 206,   0,  34,   0,   3,   0],
+       [  0,   0,   0,   0,   0, 261,   0,   3,   0,   2],
+       [ 29,   1,   0,   6,  21,   0, 195,   0,   4,   0],
+       [  0,   0,   0,   0,   0,   9,   0, 228,   0,  10],
+       [  0,   0,   0,   2,   2,   2,   6,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   6,   0, 251]])), EpochData(epoch_id=26, num_epochs=81, duration_train=249871, duration_test=763, loss_train=0.4573639553785324, accuracy=80.24, loss=13.151424020528793, class_precision=array([0.58119658, 0.97816594,        nan, 0.86995516, 0.73239437,
+       0.91319444, 0.53133515, 0.96566524, 0.92481203, 0.95366795]), class_recall=array([0.82258065, 0.96137339, 0.        , 0.87782805, 0.81889764,
+       0.9887218 , 0.76171875, 0.91093117, 0.95719844, 0.95      ]), confusion_mat=array([[204,   0,   0,   2,   2,   2,  35,   0,   3,   0],
+       [  1, 224,   0,   7,   1,   0,   0,   0,   0,   0],
+       [107,   0,   0,   4,  46,   3,  88,   0,  10,   0],
+       [  6,   2,   0, 194,   5,   0,  13,   0,   1,   0],
+       [  3,   2,   0,   7, 208,   0,  31,   0,   3,   0],
+       [  0,   0,   0,   0,   0, 263,   0,   1,   0,   2],
+       [ 30,   1,   0,   6,  21,   0, 195,   0,   3,   0],
+       [  0,   0,   0,   0,   0,  12,   0, 225,   0,  10],
+       [  0,   0,   0,   3,   1,   2,   5,   0, 246,   0],
+       [  0,   0,   0,   0,   0,   6,   0,   7,   0, 247]])), EpochData(epoch_id=27, num_epochs=81, duration_train=259571, duration_test=748, loss_train=0.265948728621006, accuracy=86.48, loss=9.411701917648315, class_precision=array([0.84051724, 0.99107143, 0.74349442, 0.87443946, 0.79423868,
+       0.94871795, 0.625     , 0.97008547, 0.96761134, 0.94382022]), class_recall=array([0.78629032, 0.9527897 , 0.7751938 , 0.88235294, 0.75984252,
+       0.97368421, 0.703125  , 0.91902834, 0.92996109, 0.96923077]), confusion_mat=array([[195,   0,   8,   5,   2,   1,  35,   0,   2,   0],
+       [  0, 222,   1,   7,   2,   0,   1,   0,   0,   0],
+       [  5,   0, 200,   3,  17,   0,  31,   0,   2,   0],
+       [  5,   2,   0, 195,   6,   0,  12,   0,   1,   0],
+       [  0,   0,  28,   5, 193,   0,  27,   0,   1,   0],
+       [  1,   0,   0,   0,   0, 259,   0,   2,   0,   4],
+       [ 26,   0,  21,   5,  22,   0, 180,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   9,   0, 227,   0,  11],
+       [  0,   0,  11,   3,   1,   1,   2,   0, 239,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   5,   0, 252]])), EpochData(epoch_id=28, num_epochs=81, duration_train=269166, duration_test=751, loss_train=0.2351978012919426, accuracy=86.32, loss=9.352703392505646, class_precision=array([0.85585586, 0.98230088, 0.72857143, 0.86995516, 0.80869565,
+       0.95220588, 0.61589404, 0.97008547, 0.97540984, 0.94382022]), class_recall=array([0.76612903, 0.9527897 , 0.79069767, 0.87782805, 0.73228346,
+       0.97368421, 0.7265625 , 0.91902834, 0.92607004, 0.96923077]), confusion_mat=array([[190,   0,   7,   4,   2,   1,  42,   0,   2,   0],
+       [  0, 222,   1,   7,   2,   0,   1,   0,   0,   0],
+       [  5,   0, 204,   3,  16,   0,  29,   0,   1,   0],
+       [  3,   3,   1, 194,   6,   0,  13,   0,   1,   0],
+       [  0,   0,  32,   7, 186,   0,  28,   0,   1,   0],
+       [  1,   0,   0,   0,   0, 259,   0,   2,   0,   4],
+       [ 23,   0,  24,   5,  17,   0, 186,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   9,   0, 227,   0,  11],
+       [  0,   1,  11,   3,   1,   0,   3,   0, 238,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   5,   0, 252]])), EpochData(epoch_id=29, num_epochs=81, duration_train=278756, duration_test=751, loss_train=0.2157639494538307, accuracy=86.16, loss=9.499196857213974, class_precision=array([0.84304933, 0.98666667, 0.73333333, 0.86877828, 0.8       ,
+       0.9588015 , 0.61184211, 0.97021277, 0.98360656, 0.9298893 ]), class_recall=array([0.75806452, 0.9527897 , 0.76744186, 0.86877828, 0.75590551,
+       0.96240602, 0.7265625 , 0.92307692, 0.93385214, 0.96923077]), confusion_mat=array([[188,   0,   8,   4,   2,   1,  44,   0,   1,   0],
+       [  0, 222,   1,   8,   1,   0,   1,   0,   0,   0],
+       [  6,   0, 198,   3,  18,   0,  32,   0,   1,   0],
+       [  4,   2,   2, 192,   7,   0,  13,   0,   1,   0],
+       [  0,   0,  30,   5, 192,   0,  26,   0,   1,   0],
+       [  1,   0,   0,   0,   0, 256,   0,   2,   0,   7],
+       [ 23,   0,  22,   6,  19,   0, 186,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 228,   0,  12],
+       [  1,   1,   9,   3,   1,   0,   2,   0, 240,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   5,   0, 252]])), EpochData(epoch_id=30, num_epochs=81, duration_train=288363, duration_test=754, loss_train=0.20917621612548828, accuracy=86.4, loss=9.61524972319603, class_precision=array([0.85321101, 0.97379913, 0.73090909, 0.87155963, 0.81702128,
+       0.95604396, 0.60702875, 0.9665272 , 0.98739496, 0.95801527]), class_recall=array([0.75      , 0.95708155, 0.77906977, 0.85972851, 0.75590551,
+       0.98120301, 0.7421875 , 0.93522267, 0.91439689, 0.96538462]), confusion_mat=array([[186,   0,   8,   3,   2,   1,  47,   0,   1,   0],
+       [  0, 223,   1,   7,   1,   0,   1,   0,   0,   0],
+       [  5,   0, 201,   3,  16,   0,  33,   0,   0,   0],
+       [  5,   4,   2, 190,   6,   0,  13,   0,   1,   0],
+       [  0,   0,  29,   6, 192,   0,  26,   0,   1,   0],
+       [  1,   0,   0,   0,   0, 261,   0,   2,   0,   2],
+       [ 19,   1,  23,   6,  17,   0, 190,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 231,   0,   9],
+       [  2,   1,  11,   3,   1,   1,   3,   0, 235,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   6,   0, 251]])), EpochData(epoch_id=31, num_epochs=81, duration_train=297794, duration_test=745, loss_train=0.1960645078122616, accuracy=86.52, loss=9.747248023748398, class_precision=array([0.85135135, 0.98660714, 0.75378788, 0.88073394, 0.79098361,
+       0.9390681 , 0.60517799, 0.97046414, 0.98760331, 0.96168582]), class_recall=array([0.76209677, 0.94849785, 0.77131783, 0.86877828, 0.75984252,
+       0.98496241, 0.73046875, 0.93117409, 0.92996109, 0.96538462]), confusion_mat=array([[189,   0,   7,   1,   3,   2,  45,   0,   1,   0],
+       [  0, 221,   2,   7,   2,   0,   1,   0,   0,   0],
+       [  6,   0, 199,   3,  19,   0,  31,   0,   0,   0],
+       [  3,   2,   1, 192,   7,   0,  15,   0,   1,   0],
+       [  0,   0,  26,   6, 193,   0,  28,   0,   1,   0],
+       [  1,   0,   0,   0,   0, 262,   0,   1,   0,   2],
+       [ 21,   0,  23,   6,  19,   0, 187,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   9,   0, 230,   0,   8],
+       [  2,   1,   6,   3,   1,   3,   2,   0, 239,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   6,   0, 251]])), EpochData(epoch_id=32, num_epochs=81, duration_train=307358, duration_test=756, loss_train=0.1900185789167881, accuracy=86.68, loss=9.501312285661697, class_precision=array([0.84782609, 0.99103139, 0.72631579, 0.86160714, 0.7826087 ,
+       0.94871795, 0.64864865, 0.97033898, 0.97609562, 0.94736842]), class_recall=array([0.78629032, 0.94849785, 0.80232558, 0.87330317, 0.77952756,
+       0.97368421, 0.65625   , 0.92712551, 0.95330739, 0.96923077]), confusion_mat=array([[195,   0,  10,   3,   2,   2,  34,   0,   2,   0],
+       [  0, 221,   1,   9,   1,   0,   1,   0,   0,   0],
+       [  5,   0, 207,   4,  17,   1,  23,   0,   1,   0],
+       [  4,   1,   2, 193,   9,   0,  11,   0,   1,   0],
+       [  0,   0,  30,   5, 198,   0,  20,   0,   1,   0],
+       [  1,   0,   0,   0,   0, 259,   0,   2,   0,   4],
+       [ 23,   0,  32,   7,  25,   0, 168,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   8,   0, 229,   0,  10],
+       [  2,   1,   3,   3,   1,   0,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   5,   0, 252]])), EpochData(epoch_id=33, num_epochs=81, duration_train=316970, duration_test=758, loss_train=0.18050442591309548, accuracy=86.4, loss=10.079328209161758, class_precision=array([0.86255924, 0.98660714, 0.73818182, 0.87214612, 0.79591837,
+       0.94160584, 0.61129568, 0.97457627, 0.97991968, 0.94736842]), class_recall=array([0.73387097, 0.94849785, 0.78682171, 0.86425339, 0.76771654,
+       0.96992481, 0.71875   , 0.93117409, 0.94941634, 0.96923077]), confusion_mat=array([[182,   0,   8,   2,   2,   2,  50,   0,   2,   0],
+       [  0, 221,   2,   8,   1,   0,   1,   0,   0,   0],
+       [  6,   0, 203,   2,  18,   1,  28,   0,   0,   0],
+       [  3,   2,   2, 191,   7,   0,  15,   0,   1,   0],
+       [  0,   0,  30,   7, 195,   0,  21,   0,   1,   0],
+       [  1,   0,   0,   0,   0, 258,   0,   1,   0,   6],
+       [ 17,   0,  27,   6,  21,   0, 184,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   9,   0, 230,   0,   8],
+       [  2,   1,   3,   3,   1,   1,   2,   0, 244,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   5,   0, 252]])), EpochData(epoch_id=34, num_epochs=81, duration_train=326567, duration_test=754, loss_train=0.1775667966902256, accuracy=86.28, loss=10.020535916090012, class_precision=array([0.85714286, 0.98654709, 0.71678322, 0.86818182, 0.79752066,
+       0.94181818, 0.62105263, 0.9665272 , 0.97211155, 0.95801527]), class_recall=array([0.75      , 0.94420601, 0.79457364, 0.86425339, 0.75984252,
+       0.97368421, 0.69140625, 0.93522267, 0.94941634, 0.96538462]), confusion_mat=array([[186,   0,  10,   1,   2,   2,  45,   0,   2,   0],
+       [  0, 220,   2,   9,   1,   0,   1,   0,   0,   0],
+       [  5,   0, 205,   3,  18,   1,  25,   0,   1,   0],
+       [  2,   2,   2, 191,   8,   0,  15,   0,   1,   0],
+       [  0,   0,  33,   7, 193,   0,  20,   0,   1,   0],
+       [  1,   0,   0,   0,   0, 259,   0,   2,   0,   4],
+       [ 21,   0,  31,   6,  19,   0, 177,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   9,   0, 231,   0,   7],
+       [  2,   1,   3,   3,   1,   1,   2,   0, 244,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   6,   0, 251]])), EpochData(epoch_id=35, num_epochs=81, duration_train=336501, duration_test=835, loss_train=0.16596893101930618, accuracy=86.4, loss=9.927189409732819, class_precision=array([0.85648148, 0.98666667, 0.72661871, 0.88732394, 0.80833333,
+       0.95185185, 0.61184211, 0.94758065, 0.97580645, 0.96124031]), class_recall=array([0.74596774, 0.9527897 , 0.78294574, 0.85520362, 0.76377953,
+       0.96616541, 0.7265625 , 0.951417  , 0.94163424, 0.95384615]), confusion_mat=array([[185,   0,  10,   0,   2,   2,  47,   0,   2,   0],
+       [  0, 222,   2,   7,   1,   0,   1,   0,   0,   0],
+       [  6,   0, 202,   2,  17,   1,  29,   0,   1,   0],
+       [  2,   2,   2, 189,   9,   0,  16,   0,   1,   0],
+       [  0,   0,  30,   6, 194,   0,  23,   0,   1,   0],
+       [  1,   0,   0,   0,   0, 257,   0,   4,   0,   4],
+       [ 20,   0,  27,   6,  16,   0, 186,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 235,   0,   6],
+       [  2,   1,   5,   3,   1,   1,   2,   0, 242,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   9,   0, 248]])), EpochData(epoch_id=36, num_epochs=81, duration_train=346183, duration_test=764, loss_train=0.16542431831359863, accuracy=86.04, loss=10.235599845647812, class_precision=array([0.82403433, 0.98660714, 0.76131687, 0.875     , 0.8       ,
+       0.95555556, 0.58153846, 0.9516129 , 0.98770492, 0.96498054]), class_recall=array([0.77419355, 0.94849785, 0.71705426, 0.85520362, 0.75590551,
+       0.96992481, 0.73828125, 0.95546559, 0.93774319, 0.95384615]), confusion_mat=array([[192,   0,   6,   3,   2,   2,  42,   0,   1,   0],
+       [  0, 221,   3,   7,   1,   0,   1,   0,   0,   0],
+       [  8,   0, 185,   2,  20,   0,  43,   0,   0,   0],
+       [  4,   2,   1, 189,   7,   0,  17,   0,   1,   0],
+       [  0,   0,  23,   8, 192,   0,  31,   0,   0,   0],
+       [  1,   0,   0,   0,   0, 258,   0,   3,   0,   4],
+       [ 24,   0,  20,   5,  17,   0, 189,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 236,   0,   5],
+       [  4,   1,   5,   2,   1,   1,   2,   0, 241,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   9,   0, 248]])), EpochData(epoch_id=37, num_epochs=81, duration_train=355966, duration_test=770, loss_train=0.14755732655525208, accuracy=86.2, loss=10.579445838928223, class_precision=array([0.83043478, 0.99099099, 0.72363636, 0.86425339, 0.80672269,
+       0.94890511, 0.61904762, 0.96624473, 0.98367347, 0.9469697 ]), class_recall=array([0.77016129, 0.94420601, 0.77131783, 0.86425339, 0.75590551,
+       0.97744361, 0.7109375 , 0.92712551, 0.93774319, 0.96153846]), confusion_mat=array([[191,   0,   8,   3,   2,   1,  42,   0,   1,   0],
+       [  0, 220,   4,   7,   1,   0,   1,   0,   0,   0],
+       [  8,   0, 199,   2,  19,   0,  29,   0,   1,   0],
+       [  5,   1,   1, 191,   9,   0,  14,   0,   0,   0],
+       [  1,   0,  28,   8, 192,   0,  24,   0,   1,   0],
+       [  0,   0,   0,   0,   0, 260,   0,   1,   0,   5],
+       [ 22,   0,  31,   6,  14,   0, 182,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   9,   0, 229,   0,   9],
+       [  3,   1,   4,   4,   1,   1,   2,   0, 241,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   7,   0, 250]])), EpochData(epoch_id=38, num_epochs=81, duration_train=365679, duration_test=773, loss_train=0.150466605424881, accuracy=85.8, loss=10.36162355542183, class_precision=array([0.8377193 , 0.99095023, 0.6996587 , 0.87037037, 0.7518797 ,
+       0.94909091, 0.6437247 , 0.96186441, 0.97222222, 0.93984962]), class_recall=array([0.77016129, 0.93991416, 0.79457364, 0.85067873, 0.78740157,
+       0.98120301, 0.62109375, 0.91902834, 0.95330739, 0.96153846]), confusion_mat=array([[191,   0,  11,   3,   2,   2,  37,   0,   2,   0],
+       [  0, 219,   3,   7,   2,   0,   2,   0,   0,   0],
+       [  7,   0, 205,   2,  19,   1,  23,   0,   1,   0],
+       [  2,   1,   1, 188,  16,   0,  12,   0,   1,   0],
+       [  0,   0,  33,   7, 200,   0,  13,   0,   1,   0],
+       [  0,   0,   0,   0,   0, 261,   0,   2,   0,   3],
+       [ 26,   0,  37,   6,  26,   0, 159,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 227,   0,  13],
+       [  2,   1,   3,   3,   1,   1,   1,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   7,   0, 250]])), EpochData(epoch_id=39, num_epochs=81, duration_train=375472, duration_test=764, loss_train=0.12821783974766732, accuracy=75.96, loss=24.10249173641205, class_precision=array([0.79919679, 0.99069767, 0.66775244, 0.79324895, 0.8125    ,
+       0.52905812, 0.6       , 0.95022624, 0.99563319, 0.98484848]), class_recall=array([0.80241935, 0.91416309, 0.79457364, 0.85067873, 0.61417323,
+       0.9924812 , 0.66796875, 0.85020243, 0.88715953, 0.25      ]), confusion_mat=array([[199,   0,   6,   5,   0,   2,  35,   0,   1,   0],
+       [  0, 213,   1,  16,   1,   0,   2,   0,   0,   0],
+       [  9,   0, 205,   3,  10,   3,  28,   0,   0,   0],
+       [  4,   0,   1, 188,  12,   0,  16,   0,   0,   0],
+       [  1,   0,  55,   9, 156,   4,  29,   0,   0,   0],
+       [  1,   0,   0,   1,   0, 264,   0,   0,   0,   0],
+       [ 28,   1,  34,  10,  12,   0, 171,   0,   0,   0],
+       [  0,   0,   0,   0,   0,  36,   0, 210,   0,   1],
+       [  7,   1,   5,   5,   1,   5,   4,   1, 228,   0],
+       [  0,   0,   0,   0,   0, 185,   0,  10,   0,  65]])), EpochData(epoch_id=40, num_epochs=81, duration_train=385268, duration_test=765, loss_train=0.13666543915867804, accuracy=85.76, loss=10.985828191041946, class_precision=array([0.83796296, 0.97797357, 0.76793249, 0.87850467, 0.80478088,
+       0.93726937, 0.5813253 , 0.95546559, 0.97933884, 0.94676806]), class_recall=array([0.72983871, 0.9527897 , 0.70542636, 0.85067873, 0.79527559,
+       0.95488722, 0.75390625, 0.95546559, 0.92217899, 0.95769231]), confusion_mat=array([[181,   0,   9,   2,   1,   2,  51,   0,   2,   0],
+       [  0, 222,   1,   7,   1,   1,   1,   0,   0,   0],
+       [  7,   0, 182,   2,  21,   1,  44,   0,   1,   0],
+       [  2,   3,   0, 188,  10,   0,  17,   0,   1,   0],
+       [  0,   0,  19,   7, 202,   2,  24,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 254,   0,   3,   0,   9],
+       [ 19,   1,  22,   5,  15,   0, 193,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 236,   0,   5],
+       [  7,   1,   4,   3,   1,   2,   2,   0, 237,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   8,   0, 249]])), EpochData(epoch_id=41, num_epochs=81, duration_train=394896, duration_test=814, loss_train=0.11596257008612156, accuracy=85.72, loss=11.130728274583817, class_precision=array([0.8185654 , 0.98666667, 0.77118644, 0.85972851, 0.78174603,
+       0.94795539, 0.59294872, 0.94758065, 0.9875    , 0.94615385]), class_recall=array([0.78225806, 0.9527897 , 0.70542636, 0.85972851, 0.77559055,
+       0.95864662, 0.72265625, 0.951417  , 0.92217899, 0.94615385]), confusion_mat=array([[194,   0,   7,   3,   2,   2,  39,   0,   1,   0],
+       [  0, 222,   2,   7,   1,   0,   1,   0,   0,   0],
+       [  8,   0, 182,   2,  23,   0,  42,   0,   1,   0],
+       [  6,   2,   0, 190,   8,   0,  15,   0,   0,   0],
+       [  1,   0,  19,   9, 197,   2,  26,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 255,   0,   2,   0,   9],
+       [ 23,   0,  22,   7,  19,   0, 185,   0,   0,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 235,   0,   5],
+       [  5,   1,   4,   3,   2,   1,   4,   0, 237,   0],
+       [  0,   0,   0,   0,   0,   2,   0,  11,   1, 246]])), EpochData(epoch_id=42, num_epochs=81, duration_train=404664, duration_test=776, loss_train=0.11580783233046532, accuracy=85.64, loss=11.45105728507042, class_precision=array([0.81578947, 0.97816594, 0.77142857, 0.87684729, 0.79435484,
+       0.93501805, 0.57878788, 0.9625    , 0.9875    , 0.95769231]), class_recall=array([0.75      , 0.96137339, 0.73255814, 0.80542986, 0.77559055,
+       0.97368421, 0.74609375, 0.93522267, 0.92217899, 0.95769231]), confusion_mat=array([[186,   0,   7,   2,   2,   1,  49,   0,   1,   0],
+       [  0, 224,   2,   5,   1,   0,   1,   0,   0,   0],
+       [  7,   0, 189,   2,  21,   1,  37,   0,   1,   0],
+       [  7,   4,   1, 178,   9,   0,  22,   0,   0,   0],
+       [  0,   0,  20,   8, 197,   2,  27,   0,   0,   0],
+       [  1,   0,   0,   0,   0, 259,   0,   1,   0,   5],
+       [ 19,   0,  22,   6,  17,   0, 191,   0,   1,   0],
+       [  0,   0,   0,   0,   0,  10,   0, 231,   0,   6],
+       [  8,   1,   4,   2,   1,   1,   3,   0, 237,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   8,   0, 249]])), EpochData(epoch_id=43, num_epochs=81, duration_train=414281, duration_test=823, loss_train=0.10538527339696885, accuracy=85.56, loss=11.877042412757874, class_precision=array([0.84513274, 0.97345133, 0.65944272, 0.87922705, 0.80084746,
+       0.95238095, 0.63333333, 0.94422311, 0.98297872, 0.96837945]), class_recall=array([0.77016129, 0.94420601, 0.8255814 , 0.82352941, 0.74409449,
+       0.97744361, 0.66796875, 0.95951417, 0.89883268, 0.94230769]), confusion_mat=array([[191,   0,  11,   2,   1,   2,  40,   0,   1,   0],
+       [  0, 220,   3,   7,   1,   0,   2,   0,   0,   0],
+       [  6,   0, 213,   2,  17,   0,  19,   0,   1,   0],
+       [  6,   4,   4, 182,   8,   0,  16,   0,   1,   0],
+       [  1,   0,  42,   6, 189,   0,  16,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 260,   0,   2,   0,   4],
+       [ 19,   1,  40,   7,  17,   0, 171,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 237,   0,   4],
+       [  3,   1,  10,   1,   3,   2,   6,   0, 231,   0],
+       [  0,   0,   0,   0,   0,   3,   0,  12,   0, 245]])), EpochData(epoch_id=44, num_epochs=81, duration_train=424063, duration_test=774, loss_train=0.1045057149976492, accuracy=86.24, loss=11.305977910757065, class_precision=array([0.8436019 , 0.98230088, 0.73626374, 0.85972851, 0.78988327,
+       0.94160584, 0.6254417 , 0.96280992, 0.97609562, 0.95038168]), class_recall=array([0.71774194, 0.9527897 , 0.77906977, 0.85972851, 0.7992126 ,
+       0.96992481, 0.69140625, 0.94331984, 0.95330739, 0.95769231]), confusion_mat=array([[178,   0,   9,   4,   2,   2,  50,   0,   3,   0],
+       [  0, 222,   1,   7,   1,   1,   1,   0,   0,   0],
+       [  7,   0, 201,   2,  18,   1,  28,   0,   1,   0],
+       [  4,   3,   3, 190,   9,   0,  11,   0,   1,   0],
+       [  1,   0,  27,   9, 203,   0,  14,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   1,   0,   7],
+       [ 19,   0,  29,   7,  23,   0, 177,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   8,   0, 233,   0,   6],
+       [  2,   1,   3,   2,   1,   1,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   8,   0, 249]])), EpochData(epoch_id=45, num_epochs=81, duration_train=433869, duration_test=758, loss_train=0.09420901909470558, accuracy=85.52, loss=12.413534283638, class_precision=array([0.83561644, 0.97797357, 0.77083333, 0.87745098, 0.78571429,
+       0.93884892, 0.56969697, 0.9626556 , 0.9796748 , 0.94676806]), class_recall=array([0.73790323, 0.9527897 , 0.71705426, 0.80995475, 0.77952756,
+       0.98120301, 0.734375  , 0.93927126, 0.93774319, 0.95769231]), confusion_mat=array([[183,   0,   7,   1,   2,   2,  52,   0,   1,   0],
+       [  0, 222,   2,   6,   1,   1,   1,   0,   0,   0],
+       [  6,   0, 185,   2,  23,   1,  40,   0,   1,   0],
+       [  6,   4,   3, 179,   9,   0,  18,   0,   1,   1],
+       [  1,   0,  17,   8, 198,   2,  28,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 261,   0,   1,   0,   4],
+       [ 18,   0,  24,   6,  18,   0, 188,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 232,   0,   9],
+       [  5,   1,   2,   2,   1,   2,   3,   0, 241,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   8,   0, 249]])), EpochData(epoch_id=46, num_epochs=81, duration_train=443567, duration_test=764, loss_train=0.08593149498105049, accuracy=85.2, loss=12.800737857818604, class_precision=array([0.83809524, 0.98666667, 0.78636364, 0.875     , 0.77099237,
+       0.94117647, 0.56285714, 0.95473251, 0.9832636 , 0.94296578]), class_recall=array([0.70967742, 0.9527897 , 0.67054264, 0.85520362, 0.79527559,
+       0.96240602, 0.76953125, 0.93927126, 0.91439689, 0.95384615]), confusion_mat=array([[176,   0,   7,   3,   2,   1,  58,   0,   1,   0],
+       [  0, 222,   1,   7,   1,   1,   1,   0,   0,   0],
+       [  6,   0, 173,   2,  26,   1,  49,   0,   1,   0],
+       [  3,   2,   1, 189,   9,   0,  16,   0,   1,   0],
+       [  1,   0,  19,   7, 202,   1,  24,   0,   0,   0],
+       [  1,   0,   0,   0,   0, 256,   0,   1,   0,   8],
+       [ 16,   0,  15,   6,  21,   0, 197,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   8,   0, 232,   0,   7],
+       [  7,   1,   4,   2,   1,   1,   5,   1, 235,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   9,   0, 248]])), EpochData(epoch_id=47, num_epochs=81, duration_train=453348, duration_test=761, loss_train=0.09276645310223103, accuracy=85.88, loss=12.272842049598694, class_precision=array([0.8364486 , 0.98214286, 0.71942446, 0.88625592, 0.796     ,
+       0.93862816, 0.60677966, 0.95435685, 0.97609562, 0.95752896]), class_recall=array([0.72177419, 0.94420601, 0.7751938 , 0.84615385, 0.78346457,
+       0.97744361, 0.69921875, 0.93117409, 0.95330739, 0.95384615]), confusion_mat=array([[179,   0,  12,   1,   2,   2,  51,   0,   1,   0],
+       [  0, 220,   3,   7,   1,   0,   2,   0,   0,   0],
+       [  6,   0, 200,   2,  19,   0,  29,   0,   2,   0],
+       [  5,   3,   3, 187,   8,   0,  14,   0,   1,   0],
+       [  0,   0,  27,   6, 199,   1,  18,   1,   2,   0],
+       [  1,   0,   0,   0,   0, 260,   0,   1,   0,   4],
+       [ 21,   0,  30,   6,  20,   0, 179,   0,   0,   0],
+       [  0,   0,   0,   0,   0,  10,   0, 230,   0,   7],
+       [  2,   1,   3,   2,   1,   1,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   9,   0, 248]])), EpochData(epoch_id=48, num_epochs=81, duration_train=463057, duration_test=765, loss_train=0.11302750542759896, accuracy=86.04, loss=12.945301592350006, class_precision=array([0.82959641, 0.9954955 , 0.71886121, 0.85909091, 0.80658436,
+       0.9379562 , 0.6344086 , 0.95510204, 0.96414343, 0.94656489]), class_recall=array([0.74596774, 0.94849785, 0.78294574, 0.85520362, 0.77165354,
+       0.96616541, 0.69140625, 0.94736842, 0.94163424, 0.95384615]), confusion_mat=array([[185,   0,  12,   4,   1,   2,  41,   0,   3,   0],
+       [  0, 221,   1,   8,   1,   1,   1,   0,   0,   0],
+       [  7,   0, 202,   2,  15,   1,  29,   0,   2,   0],
+       [  4,   1,   3, 189,   9,   0,  14,   0,   1,   0],
+       [  2,   0,  30,   8, 196,   1,  16,   0,   1,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   1,   0,   8],
+       [ 20,   0,  30,   7,  20,   0, 177,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   7,   0, 234,   0,   6],
+       [  5,   0,   3,   2,   1,   2,   1,   1, 242,   0],
+       [  0,   0,   0,   0,   0,   3,   0,   9,   0, 248]])), EpochData(epoch_id=49, num_epochs=81, duration_train=472759, duration_test=764, loss_train=0.1069245509058237, accuracy=85.56, loss=13.286048501729965, class_precision=array([0.8209607 , 0.99099099, 0.70205479, 0.87323944, 0.83018868,
+       0.93189964, 0.61311475, 0.96551724, 0.972     , 0.93984962]), class_recall=array([0.75806452, 0.94420601, 0.79457364, 0.84162896, 0.69291339,
+       0.97744361, 0.73046875, 0.90688259, 0.94552529, 0.96153846]), confusion_mat=array([[188,   0,  11,   1,   1,   2,  44,   0,   1,   0],
+       [  0, 220,   3,   8,   1,   0,   1,   0,   0,   0],
+       [  7,   0, 205,   2,  15,   0,  27,   0,   2,   0],
+       [  8,   2,   3, 186,   8,   0,  13,   0,   1,   0],
+       [  1,   0,  38,   7, 176,   1,  30,   0,   1,   0],
+       [  0,   0,   0,   0,   0, 260,   0,   1,   0,   5],
+       [ 22,   0,  30,   6,  10,   0, 187,   0,   1,   0],
+       [  0,   0,   0,   0,   0,  12,   0, 224,   0,  11],
+       [  3,   0,   2,   3,   1,   2,   3,   0, 243,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   7,   1, 250]])), EpochData(epoch_id=50, num_epochs=81, duration_train=482397, duration_test=850, loss_train=0.09792488157749175, accuracy=84.52, loss=13.826611429452896, class_precision=array([0.81465517, 0.9954955 , 0.72043011, 0.85152838, 0.7734375 ,
+       0.88054608, 0.65267176, 0.96984925, 0.97510373, 0.87804878]), class_recall=array([0.76209677, 0.94849785, 0.77906977, 0.88235294, 0.77952756,
+       0.96992481, 0.66796875, 0.78137652, 0.91439689, 0.96923077]), confusion_mat=array([[189,   0,  10,   4,   1,   1,  41,   0,   2,   0],
+       [  0, 221,   2,   8,   2,   0,   0,   0,   0,   0],
+       [  7,   0, 201,   2,  22,   1,  23,   0,   2,   0],
+       [  6,   0,   1, 195,   8,   0,   9,   0,   1,   1],
+       [  2,   0,  29,  10, 198,   1,  14,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   1,   0,   7],
+       [ 23,   0,  31,   6,  24,   0, 171,   0,   1,   0],
+       [  0,   0,   0,   0,   0,  28,   0, 193,   0,  26],
+       [  5,   1,   5,   4,   1,   1,   4,   0, 235,   1],
+       [  0,   0,   0,   0,   0,   3,   0,   5,   0, 252]])), EpochData(epoch_id=51, num_epochs=81, duration_train=492097, duration_test=806, loss_train=0.0666670647636056, accuracy=86.56, loss=13.35530748963356, class_precision=array([0.84140969, 0.9955157 , 0.70469799, 0.86320755, 0.77992278,
+       0.9588015 , 0.66535433, 0.96721311, 0.976     , 0.94360902]), class_recall=array([0.77016129, 0.9527897 , 0.81395349, 0.8280543 , 0.79527559,
+       0.96240602, 0.66015625, 0.95546559, 0.94941634, 0.96538462]), confusion_mat=array([[191,   0,  13,   3,   1,   2,  37,   0,   1,   0],
+       [  1, 222,   3,   6,   1,   0,   0,   0,   0,   0],
+       [  6,   0, 210,   3,  20,   0,  17,   0,   2,   0],
+       [  7,   1,   4, 183,   9,   0,  16,   0,   1,   0],
+       [  2,   0,  29,   7, 202,   1,  13,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 256,   0,   2,   0,   8],
+       [ 18,   0,  35,   8,  25,   0, 169,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   4,   0, 236,   0,   7],
+       [  2,   0,   4,   2,   1,   2,   2,   0, 244,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=52, num_epochs=81, duration_train=501892, duration_test=1038, loss_train=0.0565827813372016, accuracy=86.8, loss=13.741198182106018, class_precision=array([0.82478632, 0.99547511, 0.72164948, 0.87677725, 0.8       ,
+       0.95895522, 0.65503876, 0.96721311, 0.96837945, 0.94716981]), class_recall=array([0.77822581, 0.94420601, 0.81395349, 0.83710407, 0.80314961,
+       0.96616541, 0.66015625, 0.95546559, 0.95330739, 0.96538462]), confusion_mat=array([[193,   0,  11,   1,   1,   2,  39,   0,   1,   0],
+       [  1, 220,   3,   6,   1,   0,   2,   0,   0,   0],
+       [  7,   0, 210,   3,  18,   0,  18,   0,   2,   0],
+       [  7,   1,   5, 185,   7,   0,  15,   0,   1,   0],
+       [  2,   0,  25,   8, 204,   1,  13,   0,   1,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 22,   0,  34,   6,  23,   0, 169,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   4,   0, 236,   0,   7],
+       [  2,   0,   3,   2,   1,   2,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=53, num_epochs=81, duration_train=511473, duration_test=765, loss_train=0.05065128294751048, accuracy=86.52, loss=14.120200604200363, class_precision=array([0.82532751, 0.99547511, 0.72183099, 0.87677725, 0.78927203,
+       0.95895522, 0.64258555, 0.96326531, 0.96837945, 0.94716981]), class_recall=array([0.76209677, 0.94420601, 0.79457364, 0.83710407, 0.81102362,
+       0.96616541, 0.66015625, 0.95546559, 0.95330739, 0.96538462]), confusion_mat=array([[189,   0,  11,   2,   1,   2,  41,   0,   2,   0],
+       [  1, 220,   3,   6,   1,   0,   2,   0,   0,   0],
+       [  7,   0, 205,   3,  20,   0,  21,   0,   2,   0],
+       [  7,   1,   5, 185,   7,   0,  15,   0,   1,   0],
+       [  1,   0,  24,   8, 206,   1,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 22,   0,  33,   5,  25,   0, 169,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   4,   0, 236,   0,   7],
+       [  2,   0,   3,   2,   1,   2,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=54, num_epochs=81, duration_train=521270, duration_test=759, loss_train=0.04643118988722563, accuracy=86.6, loss=14.58058676123619, class_precision=array([0.82327586, 0.9954955 , 0.7311828 , 0.88038278, 0.78409091,
+       0.95895522, 0.64258555, 0.96326531, 0.96837945, 0.94716981]), class_recall=array([0.77016129, 0.94849785, 0.79069767, 0.83257919, 0.81496063,
+       0.96616541, 0.66015625, 0.95546559, 0.95330739, 0.96538462]), confusion_mat=array([[191,   0,  11,   1,   1,   2,  40,   0,   2,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  7,   0, 204,   3,  20,   0,  22,   0,   2,   0],
+       [  7,   1,   4, 184,   8,   0,  16,   0,   1,   0],
+       [  1,   0,  23,   8, 207,   1,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 23,   0,  32,   5,  25,   0, 169,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   4,   0, 236,   0,   7],
+       [  2,   0,   3,   2,   1,   2,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=55, num_epochs=81, duration_train=531067, duration_test=757, loss_train=0.04319770598784089, accuracy=86.64, loss=14.900243550539017, class_precision=array([0.82327586, 0.9954955 , 0.73476703, 0.88038278, 0.78409091,
+       0.95539033, 0.64772727, 0.96311475, 0.96825397, 0.94716981]), class_recall=array([0.77016129, 0.94849785, 0.79457364, 0.83257919, 0.81496063,
+       0.96616541, 0.66796875, 0.951417  , 0.94941634, 0.96538462]), confusion_mat=array([[191,   0,  11,   1,   1,   2,  40,   0,   2,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  7,   0, 205,   3,  20,   0,  21,   0,   2,   0],
+       [  7,   1,   5, 184,   7,   0,  16,   0,   1,   0],
+       [  1,   0,  23,   8, 207,   1,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 22,   0,  30,   5,  26,   0, 171,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  3,   0,   3,   2,   1,   2,   2,   0, 244,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=56, num_epochs=81, duration_train=540780, duration_test=762, loss_train=0.04025332100689411, accuracy=86.56, loss=15.273235857486725, class_precision=array([0.82051282, 0.9954955 , 0.72759857, 0.88095238, 0.78846154,
+       0.9588015 , 0.64528302, 0.96326531, 0.96825397, 0.94360902]), class_recall=array([0.77419355, 0.94849785, 0.78682171, 0.83710407, 0.80708661,
+       0.96240602, 0.66796875, 0.95546559, 0.94941634, 0.96538462]), confusion_mat=array([[192,   0,  11,   1,   1,   2,  39,   0,   2,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  7,   0, 203,   3,  20,   0,  23,   0,   2,   0],
+       [  7,   1,   5, 185,   6,   0,  16,   0,   1,   0],
+       [  1,   0,  25,   8, 205,   1,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 256,   0,   2,   0,   8],
+       [ 23,   0,  30,   5,  25,   0, 171,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   4,   0, 236,   0,   7],
+       [  3,   0,   3,   2,   1,   2,   2,   0, 244,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=57, num_epochs=81, duration_train=550351, duration_test=777, loss_train=0.03781645659357309, accuracy=86.64, loss=15.567215383052826, class_precision=array([0.81974249, 0.9954955 , 0.73992674, 0.87735849, 0.78195489,
+       0.95895522, 0.64393939, 0.96326531, 0.96825397, 0.94716981]), class_recall=array([0.77016129, 0.94849785, 0.78294574, 0.84162896, 0.81889764,
+       0.96616541, 0.6640625 , 0.95546559, 0.94941634, 0.96538462]), confusion_mat=array([[191,   0,  11,   1,   1,   2,  40,   0,   2,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  7,   0, 202,   3,  21,   0,  23,   0,   2,   0],
+       [  7,   1,   4, 186,   7,   0,  15,   0,   1,   0],
+       [  1,   0,  22,   8, 208,   1,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 23,   0,  29,   6,  26,   0, 170,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   4,   0, 236,   0,   7],
+       [  3,   0,   3,   2,   1,   2,   2,   0, 244,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=58, num_epochs=81, duration_train=560160, duration_test=776, loss_train=0.035793108362704516, accuracy=86.4, loss=15.921202510595322, class_precision=array([0.81896552, 0.9954955 , 0.73897059, 0.86915888, 0.7752809 ,
+       0.95185185, 0.64367816, 0.96296296, 0.96456693, 0.94716981]), class_recall=array([0.76612903, 0.94849785, 0.77906977, 0.84162896, 0.81496063,
+       0.96616541, 0.65625   , 0.94736842, 0.95330739, 0.96538462]), confusion_mat=array([[190,   0,  10,   2,   2,   2,  39,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 201,   3,  21,   0,  23,   0,   2,   0],
+       [  7,   1,   4, 186,   7,   0,  15,   0,   1,   0],
+       [  1,   0,  22,   9, 207,   1,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 22,   0,  31,   6,  27,   0, 168,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 234,   0,   7],
+       [  3,   0,   2,   2,   1,   2,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=59, num_epochs=81, duration_train=569970, duration_test=761, loss_train=0.033727341257035734, accuracy=86.4, loss=16.193026423454285, class_precision=array([0.81974249, 0.9954955 , 0.73529412, 0.86574074, 0.77067669,
+       0.95895522, 0.64615385, 0.96311475, 0.96456693, 0.94716981]), class_recall=array([0.77016129, 0.94849785, 0.7751938 , 0.84615385, 0.80708661,
+       0.96616541, 0.65625   , 0.951417  , 0.95330739, 0.96538462]), confusion_mat=array([[191,   0,  10,   2,   2,   2,  38,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 200,   3,  22,   0,  23,   0,   2,   0],
+       [  7,   1,   4, 187,   6,   0,  15,   0,   1,   0],
+       [  1,   0,  23,  10, 205,   1,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 22,   0,  30,   6,  28,   0, 168,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  3,   0,   3,   2,   1,   1,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=60, num_epochs=81, duration_train=579776, duration_test=761, loss_train=0.03199839912354946, accuracy=86.24, loss=16.4705770611763, class_precision=array([0.81623932, 0.99103139, 0.73161765, 0.86448598, 0.76579926,
+       0.95895522, 0.6459144 , 0.96311475, 0.96456693, 0.94716981]), class_recall=array([0.77016129, 0.94849785, 0.77131783, 0.83710407, 0.81102362,
+       0.96616541, 0.6484375 , 0.951417  , 0.95330739, 0.96538462]), confusion_mat=array([[191,   0,  12,   2,   1,   2,  37,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 199,   3,  23,   0,  23,   0,   2,   0],
+       [  7,   2,   4, 185,   7,   0,  15,   0,   1,   0],
+       [  1,   0,  23,   9, 206,   1,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 23,   0,  29,   7,  29,   0, 166,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  3,   0,   3,   2,   1,   1,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=61, num_epochs=81, duration_train=589487, duration_test=760, loss_train=0.02956098271533847, accuracy=86.28, loss=16.677283316850662, class_precision=array([0.81465517, 0.98660714, 0.73800738, 0.87203791, 0.76865672,
+       0.95895522, 0.64258555, 0.96311475, 0.96456693, 0.94716981]), class_recall=array([0.76209677, 0.94849785, 0.7751938 , 0.83257919, 0.81102362,
+       0.96616541, 0.66015625, 0.951417  , 0.95330739, 0.96538462]), confusion_mat=array([[189,   0,  11,   2,   1,   2,  40,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 200,   3,  23,   0,  22,   0,   2,   0],
+       [  7,   2,   4, 184,   7,   0,  16,   0,   1,   0],
+       [  1,   0,  23,   8, 206,   2,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 23,   0,  28,   6,  28,   0, 169,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  3,   1,   3,   2,   1,   0,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=62, num_epochs=81, duration_train=598978, duration_test=764, loss_train=0.02836427865549922, accuracy=86.28, loss=16.956102192401886, class_precision=array([0.81276596, 0.98660714, 0.73529412, 0.8685446 , 0.76492537,
+       0.95895522, 0.64980545, 0.96311475, 0.96456693, 0.94716981]), class_recall=array([0.77016129, 0.94849785, 0.7751938 , 0.83710407, 0.80708661,
+       0.96616541, 0.65234375, 0.951417  , 0.95330739, 0.96538462]), confusion_mat=array([[191,   0,  11,   2,   1,   2,  38,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 200,   3,  24,   0,  21,   0,   2,   0],
+       [  7,   2,   4, 185,   7,   0,  15,   0,   1,   0],
+       [  1,   0,  23,   9, 205,   2,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 24,   0,  29,   6,  28,   0, 167,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  3,   1,   3,   2,   1,   0,   2,   0, 245,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=63, num_epochs=81, duration_train=608655, duration_test=772, loss_train=0.026418911712244152, accuracy=86.4, loss=17.149200677871704, class_precision=array([0.81196581, 0.98660714, 0.72924188, 0.87264151, 0.76779026,
+       0.95895522, 0.65748031, 0.96311475, 0.96862745, 0.94716981]), class_recall=array([0.76612903, 0.94849785, 0.78294574, 0.83710407, 0.80708661,
+       0.96616541, 0.65234375, 0.951417  , 0.96108949, 0.96538462]), confusion_mat=array([[190,   0,  12,   2,   1,   2,  38,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 202,   3,  24,   0,  19,   0,   2,   0],
+       [  8,   2,   4, 185,   6,   0,  15,   0,   1,   0],
+       [  1,   0,  23,   9, 205,   2,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 23,   0,  31,   6,  28,   0, 167,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  3,   1,   3,   1,   1,   0,   1,   0, 247,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=64, num_epochs=81, duration_train=618363, duration_test=887, loss_train=0.025013237111270428, accuracy=86.68, loss=17.416006982326508, class_precision=array([0.81779661, 0.99103139, 0.74275362, 0.87323944, 0.76691729,
+       0.95895522, 0.66403162, 0.96311475, 0.96484375, 0.94716981]), class_recall=array([0.77822581, 0.94849785, 0.79457364, 0.84162896, 0.80314961,
+       0.96616541, 0.65625   , 0.951417  , 0.96108949, 0.96538462]), confusion_mat=array([[193,   0,  10,   2,   1,   2,  37,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 205,   3,  22,   0,  18,   0,   2,   0],
+       [  7,   1,   4, 186,   7,   0,  15,   0,   1,   0],
+       [  1,   0,  24,   9, 204,   2,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 23,   0,  28,   6,  29,   0, 168,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  3,   1,   3,   1,   1,   0,   1,   0, 247,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=65, num_epochs=81, duration_train=628149, duration_test=757, loss_train=0.02339693025685847, accuracy=86.52, loss=17.620917916297913, class_precision=array([0.81092437, 0.98660714, 0.73722628, 0.87264151, 0.76208178,
+       0.95895522, 0.66533865, 0.96311475, 0.96862745, 0.94716981]), class_recall=array([0.77822581, 0.94849785, 0.78294574, 0.83710407, 0.80708661,
+       0.96616541, 0.65234375, 0.951417  , 0.96108949, 0.96538462]), confusion_mat=array([[193,   0,  12,   2,   1,   2,  35,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 202,   3,  23,   0,  20,   0,   2,   0],
+       [  9,   2,   4, 185,   7,   0,  13,   0,   1,   0],
+       [  1,   0,  22,   9, 205,   2,  14,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 23,   0,  29,   6,  30,   0, 167,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  3,   1,   3,   1,   1,   0,   1,   0, 247,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=66, num_epochs=81, duration_train=637967, duration_test=753, loss_train=0.021962969405576585, accuracy=86.48, loss=17.846741318702698, class_precision=array([0.81092437, 0.98660714, 0.73818182, 0.86111111, 0.76515152,
+       0.95895522, 0.66666667, 0.96311475, 0.96850394, 0.94716981]), class_recall=array([0.77822581, 0.94849785, 0.78682171, 0.84162896, 0.79527559,
+       0.96616541, 0.65625   , 0.951417  , 0.95719844, 0.96538462]), confusion_mat=array([[193,   0,   9,   3,   1,   2,  37,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 203,   3,  23,   0,  19,   0,   2,   0],
+       [  8,   2,   4, 186,   7,   0,  13,   0,   1,   0],
+       [  1,   0,  25,  10, 202,   2,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 24,   0,  29,   6,  28,   0, 168,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  3,   1,   3,   2,   1,   0,   1,   0, 246,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=67, num_epochs=81, duration_train=647667, duration_test=752, loss_train=0.020790060199797154, accuracy=86.4, loss=18.042493402957916, class_precision=array([0.80833333, 0.98660714, 0.73800738, 0.86111111, 0.76119403,
+       0.95895522, 0.6626506 , 0.96311475, 0.96862745, 0.94716981]), class_recall=array([0.78225806, 0.94849785, 0.7751938 , 0.84162896, 0.80314961,
+       0.96616541, 0.64453125, 0.951417  , 0.96108949, 0.96538462]), confusion_mat=array([[194,   0,  11,   2,   1,   2,  35,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 200,   3,  24,   0,  21,   0,   2,   0],
+       [  8,   2,   4, 186,   7,   0,  13,   0,   1,   0],
+       [  1,   0,  23,  10, 204,   2,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 25,   0,  29,   7,  29,   0, 165,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  3,   1,   2,   2,   1,   0,   1,   0, 247,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=68, num_epochs=81, duration_train=657474, duration_test=762, loss_train=0.019613103605806828, accuracy=86.52, loss=18.294008553028107, class_precision=array([0.8125    , 0.99103139, 0.74349442, 0.86635945, 0.75836431,
+       0.95895522, 0.65863454, 0.96311475, 0.96875   , 0.94716981]), class_recall=array([0.78629032, 0.94849785, 0.7751938 , 0.85067873, 0.80314961,
+       0.96616541, 0.640625  , 0.951417  , 0.96498054, 0.96538462]), confusion_mat=array([[195,   0,   9,   2,   1,   2,  36,   0,   3,   0],
+       [  1, 221,   2,   6,   2,   0,   1,   0,   0,   0],
+       [  8,   0, 200,   3,  24,   0,  21,   0,   2,   0],
+       [  8,   1,   4, 188,   7,   0,  12,   0,   1,   0],
+       [  1,   0,  22,  10, 204,   2,  14,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 25,   0,  30,   6,  30,   0, 164,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  2,   1,   2,   2,   1,   0,   1,   0, 248,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=69, num_epochs=81, duration_train=667198, duration_test=815, loss_train=0.018769467417150736, accuracy=86.56, loss=18.4421688914299, class_precision=array([0.81742739, 0.98660714, 0.73897059, 0.86635945, 0.75645756,
+       0.95895522, 0.67083333, 0.96311475, 0.96124031, 0.94716981]), class_recall=array([0.79435484, 0.94849785, 0.77906977, 0.85067873, 0.80708661,
+       0.96616541, 0.62890625, 0.951417  , 0.96498054, 0.96538462]), confusion_mat=array([[197,   0,   9,   2,   2,   2,  32,   0,   4,   0],
+       [  1, 221,   3,   6,   1,   0,   1,   0,   0,   0],
+       [  8,   0, 201,   3,  24,   0,  20,   0,   2,   0],
+       [  7,   2,   4, 188,   7,   0,  12,   0,   1,   0],
+       [  1,   0,  23,   9, 205,   2,  13,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 25,   0,  30,   7,  31,   0, 161,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 235,   0,   7],
+       [  2,   1,   2,   2,   1,   0,   1,   0, 248,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=70, num_epochs=81, duration_train=676772, duration_test=772, loss_train=0.017501113386824727, accuracy=86.56, loss=18.722673654556274, class_precision=array([0.8185654 , 0.98666667, 0.74264706, 0.86238532, 0.75367647,
+       0.95895522, 0.67634855, 0.96296296, 0.96124031, 0.94360902]), class_recall=array([0.78225806, 0.9527897 , 0.78294574, 0.85067873, 0.80708661,
+       0.96616541, 0.63671875, 0.94736842, 0.96498054, 0.96538462]), confusion_mat=array([[194,   0,   9,   3,   2,   2,  34,   0,   4,   0],
+       [  1, 222,   3,   6,   1,   0,   0,   0,   0,   0],
+       [  8,   0, 202,   3,  23,   0,  20,   0,   2,   0],
+       [  7,   2,   4, 188,   8,   0,  11,   0,   1,   0],
+       [  1,   0,  24,   9, 205,   2,  12,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 24,   0,  28,   7,  32,   0, 163,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 234,   0,   8],
+       [  2,   1,   2,   2,   1,   0,   1,   0, 248,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=71, num_epochs=81, duration_train=686568, duration_test=764, loss_train=0.01660908599384129, accuracy=86.48, loss=18.895859479904175, class_precision=array([0.81327801, 0.98666667, 0.74264706, 0.86635945, 0.75091575,
+       0.95895522, 0.67088608, 0.96296296, 0.96124031, 0.94360902]), class_recall=array([0.79032258, 0.9527897 , 0.78294574, 0.85067873, 0.80708661,
+       0.96616541, 0.62109375, 0.94736842, 0.96498054, 0.96538462]), confusion_mat=array([[196,   0,   9,   2,   2,   2,  33,   0,   4,   0],
+       [  1, 222,   3,   6,   1,   0,   0,   0,   0,   0],
+       [  8,   0, 202,   3,  23,   0,  20,   0,   2,   0],
+       [  7,   2,   4, 188,   7,   0,  12,   0,   1,   0],
+       [  1,   0,  24,   9, 205,   2,  12,   1,   0,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 26,   0,  28,   7,  34,   0, 159,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 234,   0,   8],
+       [  2,   1,   2,   2,   1,   0,   1,   0, 248,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=72, num_epochs=81, duration_train=696350, duration_test=767, loss_train=0.015613891393877566, accuracy=86.56, loss=19.089994847774506, class_precision=array([0.81327801, 0.98666667, 0.74632353, 0.8630137 , 0.75925926,
+       0.95539033, 0.67647059, 0.96296296, 0.95719844, 0.94360902]), class_recall=array([0.79032258, 0.9527897 , 0.78682171, 0.85520362, 0.80708661,
+       0.96616541, 0.62890625, 0.94736842, 0.95719844, 0.96538462]), confusion_mat=array([[196,   0,   9,   3,   2,   2,  32,   0,   4,   0],
+       [  1, 222,   3,   6,   1,   0,   0,   0,   0,   0],
+       [  8,   0, 203,   3,  21,   0,  21,   0,   2,   0],
+       [  7,   2,   4, 189,   7,   0,  11,   0,   1,   0],
+       [  1,   0,  23,   9, 205,   2,  12,   1,   1,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 26,   0,  28,   7,  32,   0, 161,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 234,   0,   8],
+       [  2,   1,   2,   2,   2,   1,   1,   0, 246,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=73, num_epochs=81, duration_train=705953, duration_test=766, loss_train=0.015278817061334849, accuracy=86.64, loss=19.386612594127655, class_precision=array([0.81666667, 0.98666667, 0.74907749, 0.86757991, 0.75547445,
+       0.95910781, 0.67372881, 0.95901639, 0.95719844, 0.94716981]), class_recall=array([0.79032258, 0.9527897 , 0.78682171, 0.85972851, 0.81496063,
+       0.96992481, 0.62109375, 0.94736842, 0.95719844, 0.96538462]), confusion_mat=array([[196,   0,   9,   3,   2,   2,  32,   0,   4,   0],
+       [  1, 222,   3,   6,   1,   0,   0,   0,   0,   0],
+       [  8,   0, 203,   3,  21,   0,  21,   0,   2,   0],
+       [  6,   2,   4, 190,   7,   0,  11,   0,   1,   0],
+       [  1,   0,  22,   8, 207,   2,  12,   1,   1,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   2,   0,   6],
+       [ 26,   0,  28,   7,  34,   0, 159,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 234,   0,   8],
+       [  2,   1,   2,   2,   2,   0,   1,   1, 246,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=74, num_epochs=81, duration_train=715677, duration_test=826, loss_train=0.014356552558019757, accuracy=86.4, loss=19.69129490852356, class_precision=array([0.81589958, 0.99107143, 0.74087591, 0.87155963, 0.74725275,
+       0.95895522, 0.66808511, 0.96296296, 0.95      , 0.94360902]), class_recall=array([0.78629032, 0.9527897 , 0.78682171, 0.85972851, 0.80314961,
+       0.96616541, 0.61328125, 0.94736842, 0.96108949, 0.96538462]), confusion_mat=array([[195,   0,  10,   3,   1,   2,  33,   0,   4,   0],
+       [  1, 222,   3,   6,   1,   0,   0,   0,   0,   0],
+       [  8,   0, 203,   2,  22,   0,  20,   0,   3,   0],
+       [  6,   1,   3, 190,   7,   0,  12,   0,   2,   0],
+       [  1,   0,  24,   9, 204,   2,  12,   1,   1,   0],
+       [  0,   0,   0,   0,   0, 257,   0,   2,   0,   7],
+       [ 26,   0,  29,   6,  36,   0, 157,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 234,   0,   8],
+       [  2,   1,   2,   2,   2,   0,   1,   0, 247,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=75, num_epochs=81, duration_train=725403, duration_test=815, loss_train=0.07104980478994548, accuracy=85.72, loss=19.418685615062714, class_precision=array([0.80497925, 0.99099099, 0.66666667, 0.81666667, 0.80821918,
+       0.95571956, 0.68995633, 0.9626556 , 0.96414343, 0.94716981]), class_recall=array([0.78225806, 0.94420601, 0.82945736, 0.88687783, 0.69685039,
+       0.97368421, 0.6171875 , 0.93927126, 0.94163424, 0.96538462]), confusion_mat=array([[194,   0,  10,   7,   1,   2,  32,   0,   2,   0],
+       [  0, 220,   4,   7,   1,   0,   1,   0,   0,   0],
+       [  9,   0, 214,   5,  12,   0,  15,   0,   3,   0],
+       [  7,   1,   4, 196,   4,   0,   8,   0,   1,   0],
+       [  2,   0,  45,  14, 177,   2,  13,   0,   1,   0],
+       [  0,   0,   0,   0,   0, 259,   0,   2,   0,   5],
+       [ 25,   0,  41,   8,  23,   0, 158,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 232,   0,   9],
+       [  4,   1,   3,   3,   1,   0,   2,   1, 242,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=76, num_epochs=81, duration_train=735167, duration_test=774, loss_train=0.03300349727272987, accuracy=86.36, loss=18.923386335372925, class_precision=array([0.85446009, 0.99103139, 0.7481203 , 0.86238532, 0.76492537,
+       0.95925926, 0.62323944, 0.95546559, 0.96812749, 0.95769231]), class_recall=array([0.73387097, 0.94849785, 0.77131783, 0.85067873, 0.80708661,
+       0.97368421, 0.69140625, 0.95546559, 0.94552529, 0.95769231]), confusion_mat=array([[182,   0,  10,   3,   2,   2,  46,   0,   3,   0],
+       [  0, 221,   3,   7,   1,   0,   1,   0,   0,   0],
+       [  6,   0, 199,   3,  22,   0,  26,   0,   2,   0],
+       [  3,   1,   3, 188,   8,   0,  17,   0,   1,   0],
+       [  1,   0,  21,   9, 205,   2,  16,   0,   0,   0],
+       [  0,   0,   0,   0,   0, 259,   0,   2,   0,   5],
+       [ 18,   0,  27,   6,  27,   0, 177,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 236,   0,   6],
+       [  3,   1,   3,   2,   3,   0,   1,   1, 243,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   8,   1, 249]])), EpochData(epoch_id=77, num_epochs=81, duration_train=744650, duration_test=763, loss_train=0.018989760549739002, accuracy=86.4, loss=19.24894028902054, class_precision=array([0.82008368, 0.9955157 , 0.72597865, 0.8685446 , 0.76779026,
+       0.95202952, 0.66393443, 0.96280992, 0.95686275, 0.94716981]), class_recall=array([0.79032258, 0.9527897 , 0.79069767, 0.83710407, 0.80708661,
+       0.96992481, 0.6328125 , 0.94331984, 0.94941634, 0.96538462]), confusion_mat=array([[196,   0,  10,   1,   2,   2,  34,   0,   3,   0],
+       [  1, 222,   3,   6,   1,   0,   0,   0,   0,   0],
+       [  8,   0, 204,   3,  19,   0,  22,   0,   2,   0],
+       [  7,   1,   5, 185,   9,   0,  12,   0,   2,   0],
+       [  2,   0,  21,   9, 205,   2,  13,   1,   1,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   2,   0,   6],
+       [ 23,   0,  34,   7,  28,   0, 162,   0,   2,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 233,   0,   8],
+       [  2,   0,   4,   2,   3,   1,   1,   0, 244,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=78, num_epochs=81, duration_train=754251, duration_test=782, loss_train=0.015104625658132136, accuracy=86.48, loss=19.498208940029144, class_precision=array([0.8220339 , 0.99107143, 0.74275362, 0.86175115, 0.75925926,
+       0.95555556, 0.66530612, 0.95901639, 0.96047431, 0.94716981]), class_recall=array([0.78225806, 0.9527897 , 0.79457364, 0.84615385, 0.80708661,
+       0.96992481, 0.63671875, 0.94736842, 0.94552529, 0.96538462]), confusion_mat=array([[194,   0,  10,   3,   2,   2,  34,   0,   3,   0],
+       [  1, 222,   3,   6,   1,   0,   0,   0,   0,   0],
+       [  8,   0, 205,   3,  20,   0,  20,   0,   2,   0],
+       [  5,   1,   3, 187,   9,   0,  14,   0,   2,   0],
+       [  1,   0,  22,   9, 205,   2,  13,   1,   1,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   2,   0,   6],
+       [ 25,   0,  30,   7,  30,   0, 163,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 234,   0,   8],
+       [  2,   1,   3,   2,   3,   1,   1,   1, 243,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=79, num_epochs=81, duration_train=763973, duration_test=758, loss_train=0.013608972639776767, accuracy=86.52, loss=19.58817446231842, class_precision=array([0.81434599, 0.99111111, 0.74725275, 0.86574074, 0.76404494,
+       0.95910781, 0.66129032, 0.95901639, 0.95703125, 0.94716981]), class_recall=array([0.77822581, 0.95708155, 0.79069767, 0.84615385, 0.80314961,
+       0.96992481, 0.640625  , 0.94736842, 0.95330739, 0.96538462]), confusion_mat=array([[193,   0,   9,   4,   2,   2,  34,   0,   4,   0],
+       [  1, 223,   3,   5,   1,   0,   0,   0,   0,   0],
+       [  8,   0, 204,   2,  20,   0,  22,   0,   2,   0],
+       [  5,   1,   3, 187,   9,   0,  14,   0,   2,   0],
+       [  2,   0,  22,   9, 204,   2,  13,   1,   1,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   2,   0,   6],
+       [ 26,   0,  30,   7,  28,   0, 164,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   5,   0, 234,   0,   8],
+       [  2,   1,   2,   2,   3,   0,   1,   1, 245,   0],
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]])), EpochData(epoch_id=80, num_epochs=81, duration_train=773657, duration_test=769, loss_train=0.012717218692414463, accuracy=86.64, loss=20.004385948181152, class_precision=array([0.81512605, 0.99107143, 0.75185185, 0.85844749, 0.77992278,
+       0.95202952, 0.66796875, 0.95884774, 0.95686275, 0.94716981]), class_recall=array([0.78225806, 0.9527897 , 0.78682171, 0.85067873, 0.79527559,
+       0.96992481, 0.66796875, 0.94331984, 0.94941634, 0.96538462]), confusion_mat=array([[194,   0,   8,   4,   2,   2,  34,   0,   4,   0],
+       [  1, 222,   3,   6,   1,   0,   0,   0,   0,   0],
+       [  8,   0, 203,   2,  20,   0,  23,   0,   2,   0],
+       [  6,   1,   2, 188,   8,   0,  14,   0,   2,   0],
+       [  2,   0,  23,  10, 202,   2,  13,   1,   1,   0],
+       [  0,   0,   0,   0,   0, 258,   0,   2,   0,   6],
+       [ 25,   0,  29,   7,  23,   0, 171,   0,   1,   0],
+       [  0,   0,   0,   0,   0,   6,   0, 233,   0,   8],
+       [  2,   1,   2,   2,   3,   1,   1,   1, 244,   0],
+10-08-2022 13:42:14 root         INFO     Stopping client...
+       [  0,   0,   0,   0,   0,   2,   0,   6,   1, 251]]))]
