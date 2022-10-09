@@ -12,7 +12,7 @@ class Nets(Enum):
     fashion_mnist_resnet = 'FashionMNISTResNet'
     mnist_cnn = 'MNISTCNN'
     lenet_5 = 'Lenet5'
-    vision_transformer = 'ViT'
+    vit_mnist = 'ViTMNIST'
 
     @classmethod
     def _missing_name_(cls, name: str) -> 'Dataset':
