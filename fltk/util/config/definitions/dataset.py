@@ -3,7 +3,7 @@ from typing import Type
 from aenum import unique, Enum
 
 from fltk import datasets
-from fltk.datasets import CIFAR10Dataset, CIFAR100Dataset, FashionMNISTDataset, MNIST
+from fltk.datasets import CIFAR10Dataset, CIFAR100Dataset, FashionMNISTDataset, MNIST, MNIST_RGB, Flowers102Dataset
 
 
 @unique
@@ -13,6 +13,8 @@ class Dataset(Enum):
     cifar100 = 'cifar100'
     fashion_mnist = 'fashion-mnist'
     mnist = 'mnist'
+    mnist_rgb = 'mnist_rgb'
+    flowers= 'flowers'
 
     @classmethod
     def _missing_name_(cls, name: str) -> "Dataset":
@@ -44,6 +46,8 @@ def get_dist_dataset(name: Dataset) -> Type[datasets.Dataset]:
         Dataset.cifar10: CIFAR10Dataset,
         Dataset.cifar100: CIFAR100Dataset,
         Dataset.fashion_mnist: FashionMNISTDataset,
-        Dataset.mnist: MNIST
+        Dataset.mnist: MNIST,
+        Dataset.mnist_rgb: MNIST_RGB,
+        Dataset.flowers: Flowers102Dataset
     }
     return __lookup[name]

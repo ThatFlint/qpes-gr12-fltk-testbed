@@ -14,8 +14,10 @@ from .mnist_cnn import MNIST_CNN
 from .reddit_lstm import RNNModel
 from .simple import SimpleMnist, SimpleNet, Lenet5
 
-# Add torchvision models
+# Add custom models
 from .vision_transformer import ViT_MNIST, ViT_Flowers, ViT_CIFAR, Swin_MNIST, Swin_CIFAR, Swin_Flowers
+from .convnext import ConvNext_MNIST, ConvNext_CIFAR, ConvNext_Flowers
+from .efficientnetv2 import EfficientNetV2_MNIST, EfficientNetV2_CIFAR, EfficientNetV2_Flowers
 
 
 def _available_nets() -> Dict[Nets, Type[torch.nn.Module]]:
@@ -38,7 +40,13 @@ def _available_nets() -> Dict[Nets, Type[torch.nn.Module]]:
         Nets.vit_flowers: ViT_Flowers,
         Nets.swin_mnist: Swin_MNIST,
         Nets.swin_cifar: Swin_CIFAR,
-        Nets.swin_flowers: Swin_Flowers
+        Nets.swin_flowers: Swin_Flowers,
+        Nets.convnext_mnist: ConvNext_MNIST,
+        Nets.convnext_cifar: ConvNext_CIFAR,
+        Nets.convnext_flowers: ConvNext_Flowers,
+        Nets.efficientnetv2_mnist: EfficientNetV2_MNIST,
+        Nets.efficientnetv2_cifar: EfficientNetV2_CIFAR,
+        Nets.efficientnetv2_flowers: EfficientNetV2_Flowers
     }
 
 

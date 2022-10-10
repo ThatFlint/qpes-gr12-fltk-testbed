@@ -43,7 +43,6 @@ class Swin_MNIST(SwinTransformer):
     # eg. Swin-T
     def __init__(self):
         super(Swin_MNIST, self).__init__(patch_size=[4, 4],
-                                         
                                          embed_dim=96,
                                          depths=[2, 2, 6, 2],
                                          num_heads=[3, 6, 12, 24],

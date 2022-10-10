@@ -20,13 +20,13 @@
           "networkConfiguration": {
             "network": "ViTMNIST",
             "lossFunction": "CrossEntropyLoss",
-            "dataset": "mnist-resized"
+            "dataset": "mnist_rgb"
           },
           "systemParameters": {
             "dataParallelism": 1,
             "configurations": {
               "default": {
-                "cores": "800m",
+                "cores": "1000m",
                 "memory": "1Gi"
               }
             }
