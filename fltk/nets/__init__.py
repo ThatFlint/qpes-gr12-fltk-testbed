@@ -15,7 +15,7 @@ from .reddit_lstm import RNNModel
 from .simple import SimpleMnist, SimpleNet, Lenet5
 
 # Add torchvision models
-from .vision_transformer import ViT_MNIST
+from .vision_transformer import ViT_MNIST, ViT_Flowers, ViT_CIFAR, Swin_MNIST, Swin_CIFAR, Swin_Flowers
 
 
 def _available_nets() -> Dict[Nets, Type[torch.nn.Module]]:
@@ -33,7 +33,12 @@ def _available_nets() -> Dict[Nets, Type[torch.nn.Module]]:
         Nets.fashion_mnist_resnet: FashionMNISTResNet,
         Nets.mnist_cnn: MNIST_CNN,
         Nets.lenet_5: Lenet5,
-        Nets.vit_mnist: ViT_MNIST
+        Nets.vit_mnist: ViT_MNIST,
+        Nets.vit_cifar: ViT_CIFAR,
+        Nets.vit_flowers: ViT_Flowers,
+        Nets.swin_mnist: Swin_MNIST,
+        Nets.swin_cifar: Swin_CIFAR,
+        Nets.swin_flowers: Swin_Flowers
     }
 
 

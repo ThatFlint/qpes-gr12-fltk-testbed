@@ -13,6 +13,11 @@ class Nets(Enum):
     mnist_cnn = 'MNISTCNN'
     lenet_5 = 'Lenet5'
     vit_mnist = 'ViTMNIST'
+    vit_cifar = 'ViTCIFAR'
+    vit_flowers = 'ViTFlowers'
+    swin_mnist = 'SwinMNIST'
+    swin_cifar = 'SwinCIFAR'
+    swin_flowers = 'SwinFlowers'
 
     @classmethod
     def _missing_name_(cls, name: str) -> 'Dataset':
