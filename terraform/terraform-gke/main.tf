@@ -46,7 +46,7 @@ module "gke" {
     },
     {
       name               = "fltk-pool-1"
-      machine_type       = "e2-highcpu-4"
+      machine_type       = "e2-standard-4"
       node_locations     = "us-central1-c"
       auto_scaling       = false              # Make sure to set min/max count if you change this
       node_count         = 4
@@ -66,7 +66,7 @@ module "gke" {
     },
     {
       name               = "fltk-pool-2"
-      machine_type       = "e2-highmem-2"
+      machine_type       = "e2-standard-8"
       node_locations     = "us-central1-c"
       auto_scaling       = false              # Make sure to set min/max count if you change this
       node_count         = 4
