@@ -2,7 +2,7 @@ from __future__ import annotations
 import os
 from argparse import Namespace
 
-from torchvision.datasets import FashionMNIST, CIFAR10, CIFAR100, MNIST
+from torchvision.datasets import FashionMNIST, CIFAR10, CIFAR100, MNIST, Flowers102
 
 from typing import TYPE_CHECKING
 
@@ -38,3 +38,5 @@ def download_datasets(args: Namespace, config: DistributedConfig):
     CIFAR10(root=root, download=True)
     # Prepare CIFAR100
     CIFAR100(root=root, download=True)
+    # Prepare Flowers102
+    Flowers102(root=root, download=True)
