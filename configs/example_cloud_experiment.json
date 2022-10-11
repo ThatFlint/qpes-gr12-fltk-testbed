@@ -1,13 +1,13 @@
 {
    "cluster": {
       "orchestrator": {
-         "orchestrator_type": "simulated"
+         "orchestrator_type": "batch"
       },
       "client": {
          "prefix": "client",
          "tensorboard_active": false
       },
-      "image": "gcr.io/test-bed-fltk/fltk:latest",
+      "image": "gcr.io/fltk-flint/fltk:latest",
       "namespace": "test"
    },
    "execution_config": {
