@@ -5,7 +5,7 @@ variable "kubernetes_config_path" {
 
 variable "project_id" {
   type        = string
-  default     = "test-bed-fltk-jerrit"
+  default     = "fltk-flint"
   description = "Google Cloud project name to create cluster in."
 }
 
