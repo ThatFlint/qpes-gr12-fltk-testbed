@@ -346,6 +346,9 @@ class BatchOrchestrator(Orchestrator):
             self.pending_tasks.put(task)
         # 2. Schedule all tasks that arrived previously
         while not self.pending_tasks.empty():
+
+            # Need to monitor runtime, edit
+
             # Do blocking request to priority queue
             curr_task: ArrivalTask = self.pending_tasks.get()
             self._logger.info(f"Scheduling arrival of Arrival: {curr_task.id}")

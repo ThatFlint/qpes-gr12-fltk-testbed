@@ -45,8 +45,28 @@ module "gke" {
       initial_node_count = 0
     },
     {
-      name               = "small-fltk-pool-1"
+      name               = "fltk-pool-1"
       machine_type       = "e2-highcpu-4"
+      node_locations     = "us-central1-c"
+      auto_scaling       = false              # Make sure to set min/max count if you change this
+      node_count         = 4
+      min_count          = 0
+      local_ssd_count    = 0
+      spot               = false
+      disk_size_gb       = 64
+      disk_type          = "pd-standard"
+      image_type         = "COS_CONTAINERD"
+      enable_gcfs        = false
+      enable_gvnic       = false
+      auto_repair        = true
+      auto_upgrade       = true
+      service_account    = local.terraform_service_account
+      preemptible        = false
+      initial_node_count = 0
+    },
+    {
+      name               = "fltk-pool-2"
+      machine_type       = "e2-highmem-2"
       node_locations     = "us-central1-c"
       auto_scaling       = false              # Make sure to set min/max count if you change this
       node_count         = 4
@@ -86,8 +106,11 @@ module "gke" {
 
     default-node-pool = {}
 
-    medium-fltk-pool-1 = {
-      node-pool-metadata-custom-value = "medium-node-pool-fltk"
+    fltk-pool-1 = {
+      node-pool-metadata-custom-value = "node-pool-fltk-1"
+    }
+    fltk-pool-2 = {
+      node-pool-metadata-custom-value = "node-pool-fltk-2"
     }
   }
 
@@ -96,7 +119,14 @@ module "gke" {
     default-node-pool = [] # Default nodepool that will contain all the other pods
 
     # Taint node pool for scheduling testbed-pods only/preferentially
-    medium-fltk-pool-1 = [
+    fltk-pool-1 = [
+      {
+        key    = "fltk.node"          # Taint is used in fltk pods
+        value  = "medium-e2"          # In case more explicit matching is required
+        effect = "PREFER_NO_SCHEDULE" # Other Pods are preferably not scheduled on this pool
+      },
+    ]
+    fltk-pool-2 = [
       {
         key    = "fltk.node"          # Taint is used in fltk pods
         value  = "medium-e2"          # In case more explicit matching is required
@@ -112,8 +142,11 @@ module "gke" {
       "default-node-pool",
     ]
 
-    fltk-node-pool-1 = [
+    fltk-pool-1 = [
       "fltk-experiment-pool-1",
+    ]
+    fltk-pool-2 = [
+      "fltk-experiment-pool-2",
     ]
   }
 }

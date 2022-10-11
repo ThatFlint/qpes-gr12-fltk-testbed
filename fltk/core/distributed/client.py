@@ -17,6 +17,7 @@ from fltk.schedulers import MinCapableStepLR, LearningScheduler
 from fltk.strategy import get_optimizer
 from fltk.util.config.definitions.dataset import get_dist_dataset
 from fltk.util.results import EpochData
+import psutil
 
 if TYPE_CHECKING:
     from fltk.util.config import DistributedConfig, DistLearnerConfig
@@ -269,3 +270,15 @@ class DistClient(DistNode):
             self.tb_writer.add_scalar('accuracy per epoch',
                                       epoch_data.accuracy,
                                       epoch)
+
+            self.tb_writer.add_scalar('epoch training time',
+                                      epoch_data.duration_train,
+                                      epoch)
+
+            self.tb_writer.add_scalar('epoch test time',
+                                      epoch_data.duration_test,
+                                      epoch)
+        # Record CPU usage for whole epoch, in this case direct to stdout
+        elapsed_time = epoch_data.duration_test + epoch_data.duration_train
+        self._logger.info(f'CPU utilization of this epoch {psutil.cpu_percent(elapsed_time)}')
+
