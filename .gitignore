@@ -147,7 +147,6 @@ refactor-notes.md
 experiments/**/exps/*
 *.test.py
 
-logging/*
 
 ### Helm ###
 # Chart dependencies

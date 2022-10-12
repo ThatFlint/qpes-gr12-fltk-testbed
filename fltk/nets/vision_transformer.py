@@ -9,7 +9,7 @@ class ViT_MNIST(VisionTransformer):
         super(ViT_MNIST, self).__init__(image_size=28,
                                         patch_size=7,
                                         num_layers=6,
-                                        num_heads=8,
+                                        num_heads=6,
                                         hidden_dim=64,
                                         num_classes=10,
                                         mlp_dim=128)
@@ -28,15 +28,15 @@ class ViT_CIFAR(VisionTransformer):
 
 
 class ViT_Flowers(VisionTransformer):
-    # eg ViT-Base-16
+    # Using a smaller ViT so it actually gets through epochs
     def __init__(self):
-        super(ViT_Flowers, self).__init__(image_size=64,
-                                          patch_size=16,
-                                          num_layers=12,
-                                          num_heads=12,
-                                          hidden_dim=768,
-                                          mlp_dim=3072,
-                                          num_classes=102)
+        super(ViT_Flowers, self).__init__(image_size=28,
+                                          patch_size=7,
+                                          num_layers=6,
+                                          num_heads=6,
+                                          hidden_dim=64,
+                                          num_classes=102,
+                                          mlp_dim=128)
 
 
 class Swin_MNIST(SwinTransformer):
