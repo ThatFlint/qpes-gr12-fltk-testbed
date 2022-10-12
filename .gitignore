@@ -147,6 +147,7 @@ refactor-notes.md
 experiments/**/exps/*
 *.test.py
 
+logging/*
 
 ### Helm ###
 # Chart dependencies
@@ -179,7 +180,7 @@ experiments/**/exps/*
 **/*_override.tf.json
 
 # Include override files you do wish to add to version control using negated pattern
-!main.tf
+# !example_override.tf
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*

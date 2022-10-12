@@ -13,7 +13,6 @@ class Flowers102Dataset(Dataset):
     DEFAULT_TRANSFORM = transforms.Compose([
         transforms.RandomHorizontalFlip(),
         transforms.RandomCrop(size=64, pad_if_needed=True),
-        transforms.Resize(size=28),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.507, 0.487, 0.441], std=[0.267, 0.256, 0.276])
     ])

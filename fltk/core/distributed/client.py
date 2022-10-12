@@ -278,9 +278,7 @@ class DistClient(DistNode):
             self.tb_writer.add_scalar('epoch test time',
                                       epoch_data.duration_test,
                                       epoch)
-
-            #elapsed_time = (epoch_data.duration_test + epoch_data.duration_train) / 1000
-            #self.tb_writer.add_scalar('epoch cpu util',
-            #                          psutil.cpu_percent(elapsed_time),
-            #                          epoch)
+        # Record CPU usage for whole epoch, in this case direct to stdout
+        elapsed_time = epoch_data.duration_test + epoch_data.duration_train
+        self._logger.info(f'CPU utilization of this epoch {psutil.cpu_percent(elapsed_time)}')
 
