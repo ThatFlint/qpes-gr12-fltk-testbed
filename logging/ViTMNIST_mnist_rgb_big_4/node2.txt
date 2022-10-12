@@ -1,0 +1,85 @@
+10-12-2022 17:49:50 root         INFO     Loading file config/configuration.fltk.json
+10-12-2022 17:49:50 root         INFO     Starting in client mode
+10-12-2022 17:49:50 root         INFO     Starting with host=trainjob-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d-master-0 and port=23456
+10-12-2022 17:49:50 root         INFO     Initializing backend for training process: gloo
+10-12-2022 17:49:50 torch.distributed.distributed_c10d INFO     Added key: store_based_barrier_key:1 to store for rank: 2
+10-12-2022 17:49:50 torch.distributed.distributed_c10d INFO     Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+10-12-2022 17:49:50 root         INFO     Starting Creating client with 2
+10-12-2022 17:49:50 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     Initializing learning client
+10-12-2022 17:49:50 root         INFO     Getting net: Nets.vit_mnist
+10-12-2022 17:49:50 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     Preparing learner model with distributed=True
+10-12-2022 17:49:50 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     Starting training of model Nets.vit_mnist with batch size 100 and max epochs 5.
+10-12-2022 17:49:51 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [1,     0] loss: 0.046
+10-12-2022 17:49:51 torch.nn.parallel.distributed INFO     Reducer buckets have been rebuilt in this iteration.
+10-12-2022 17:50:02 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [1,    50] loss: 1.747
+10-12-2022 17:50:14 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [1,   100] loss: 1.154
+10-12-2022 17:50:27 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [2,     0] loss: 0.015
+10-12-2022 17:50:38 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [2,    50] loss: 0.686
+10-12-2022 17:50:51 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [2,   100] loss: 0.563
+10-12-2022 17:51:04 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [3,     0] loss: 0.009
+10-12-2022 17:51:16 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [3,    50] loss: 0.409
+10-12-2022 17:51:28 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [3,   100] loss: 0.339
+10-12-2022 17:51:40 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [4,     0] loss: 0.005
+10-12-2022 17:51:52 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [4,    50] loss: 0.252
+10-12-2022 17:52:04 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [4,   100] loss: 0.234
+10-12-2022 17:52:17 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [5,     0] loss: 0.003
+10-12-2022 17:52:29 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [5,    50] loss: 0.201
+10-12-2022 17:52:41 Client-2-fb903c15-0c8d-4a4e-9b64-a9abe0b10e9d INFO     [5,   100] loss: 0.196
+10-12-2022 17:52:54 root         INFO     Stopping client...
+No argument path is provided.
+[EpochData(epoch_id=1, num_epochs=6, duration_train=34629, duration_test=1351, loss_train=1.15352410197258, accuracy=73.52, loss=7.817321538925171, class_precision=array([0.71375465, 0.99134199, 0.75336323, 0.76777251, 0.76428571,
+       0.57740586, 0.79457364, 0.94557823, 0.56069364, 0.66554054]), class_recall=array([0.81012658, 0.82971014, 0.60431655, 0.61363636, 0.82307692,
+       0.61607143, 0.8649789 , 0.56967213, 0.80165289, 0.82773109]), confusion_mat=array([[192,   0,   1,   2,   4,   2,  13,   0,  23,   0],
+       [ 15, 229,   0,   0,  11,   0,   6,   0,  15,   0],
+       [ 14,   0, 168,  12,   1,  38,  12,   3,  27,   3],
+       [  9,   0,  21, 162,   4,  39,   2,   0,  17,  10],
+       [  2,   1,   3,   0, 214,   2,   5,   1,  12,  20],
+       [  5,   0,  15,  30,   2, 138,   2,   0,  32,   0],
+       [  7,   0,   9,   0,   2,   0, 205,   1,   8,   5],
+       [  0,   1,   3,   1,  29,  13,   4, 139,   4,  50],
+       [ 21,   0,   2,   3,   3,   3,   4,   1, 194,  11],
+       [  4,   0,   1,   1,  10,   4,   5,   2,  14, 197]])), EpochData(epoch_id=2, num_epochs=6, duration_train=71714, duration_test=1330, loss_train=0.562789272069931, accuracy=84.68, loss=4.741074174642563, class_precision=array([0.78546713, 0.98884758, 0.88557214, 0.96059113, 0.83617747,
+       0.64067797, 0.83657588, 0.93273543, 0.80487805, 0.875     ]), class_recall=array([0.95780591, 0.96376812, 0.64028777, 0.73863636, 0.94230769,
+       0.84375   , 0.907173  , 0.85245902, 0.81818182, 0.82352941]), confusion_mat=array([[227,   0,   0,   0,   1,   0,   5,   0,   4,   0],
+       [  1, 266,   0,   0,   1,   0,   4,   0,   4,   0],
+       [ 25,   0, 178,   2,   6,  35,  17,   4,  10,   1],
+       [  5,   0,  11, 195,   0,  42,   1,   1,   6,   3],
+       [  0,   1,   1,   0, 245,   0,   4,   2,   0,   7],
+       [  6,   0,   6,   3,   3, 189,   2,   0,  15,   0],
+       [  6,   0,   0,   0,   7,   5, 215,   3,   0,   1],
+       [  1,   2,   5,   1,  11,   7,   0, 208,   0,   9],
+       [ 13,   0,   0,   2,   2,  13,   7,   0, 198,   7],
+       [  5,   0,   0,   0,  17,   4,   2,   5,   9, 196]])), EpochData(epoch_id=3, num_epochs=6, duration_train=108097, duration_test=1330, loss_train=0.3394214642047882, accuracy=92.12, loss=2.7507128566503525, class_precision=array([0.91836735, 0.98201439, 0.93461538, 0.93307087, 0.91176471,
+       0.87878788, 0.88505747, 0.91633466, 0.93577982, 0.90869565]), class_recall=array([0.94936709, 0.98913043, 0.87410072, 0.89772727, 0.95384615,
+       0.90625   , 0.97468354, 0.94262295, 0.84297521, 0.87815126]), confusion_mat=array([[225,   0,   0,   0,   0,   4,   6,   1,   1,   0],
+       [  0, 273,   0,   0,   0,   0,   0,   2,   0,   1],
+       [  3,   0, 243,   6,   1,   5,  10,   6,   3,   1],
+       [  2,   1,   5, 237,   1,   8,   0,   3,   3,   4],
+       [  0,   1,   2,   0, 248,   0,   2,   1,   1,   5],
+       [  3,   0,   5,   7,   1, 203,   1,   0,   4,   0],
+       [  1,   1,   0,   0,   1,   0, 231,   0,   1,   2],
+       [  0,   1,   4,   0,   4,   2,   0, 230,   0,   3],
+       [  5,   1,   1,   2,   3,   7,  10,   4, 204,   5],
+       [  6,   0,   0,   2,  13,   2,   1,   4,   1, 209]])), EpochData(epoch_id=4, num_epochs=6, duration_train=144839, duration_test=1416, loss_train=0.23409625872969628, accuracy=93.32, loss=2.1994234919548035, class_precision=array([0.93277311, 0.97111913, 0.89491525, 0.9488189 , 0.95752896,
+       0.94146341, 0.86666667, 0.97008547, 0.91176471, 0.94782609]), class_recall=array([0.93670886, 0.97463768, 0.94964029, 0.91287879, 0.95384615,
+       0.86160714, 0.98734177, 0.93032787, 0.89669421, 0.91596639]), confusion_mat=array([[222,   0,   0,   0,   0,   1,  11,   1,   2,   0],
+       [  0, 269,   3,   0,   0,   0,   3,   0,   1,   0],
+       [  0,   0, 264,   1,   0,   0,   4,   3,   6,   0],
+       [  5,   0,   4, 241,   0,   8,   0,   1,   4,   1],
+       [  0,   1,   2,   0, 248,   0,   4,   0,   1,   4],
+       [  4,   1,  10,   7,   0, 193,   5,   1,   3,   0],
+       [  1,   0,   0,   0,   0,   0, 234,   0,   2,   0],
+       [  1,   1,   7,   0,   4,   0,   0, 227,   0,   4],
+       [  2,   1,   4,   3,   1,   2,   8,   1, 217,   3],
+       [  3,   4,   1,   2,   6,   1,   1,   0,   2, 218]])), EpochData(epoch_id=5, num_epochs=6, duration_train=182296, duration_test=1427, loss_train=0.19569893270730973, accuracy=94.8, loss=1.7522772699594498, class_precision=array([0.95528455, 0.98194946, 0.91496599, 0.8951049 , 0.97177419,
+       0.97073171, 0.97457627, 0.97807018, 0.94190871, 0.91213389]), class_recall=array([0.99156118, 0.98550725, 0.9676259 , 0.96969697, 0.92692308,
+       0.88839286, 0.97046414, 0.91393443, 0.93801653, 0.91596639]), confusion_mat=array([[235,   0,   0,   0,   0,   0,   2,   0,   0,   0],
+       [  0, 272,   1,   0,   0,   1,   0,   0,   2,   0],
+       [  0,   0, 269,   6,   0,   0,   1,   1,   1,   0],
+       [  1,   0,   3, 256,   0,   2,   0,   1,   1,   0],
+       [  1,   2,   2,   0, 241,   0,   1,   1,   1,  11],
+       [  3,   1,   5,  13,   0, 199,   0,   0,   1,   2],
+       [  2,   1,   0,   0,   1,   1, 230,   0,   2,   0],
+       [  1,   0,   9,   1,   2,   0,   0, 223,   1,   7],
+       [  1,   0,   5,   5,   0,   1,   2,   0, 227,   1],
+       [  2,   1,   0,   5,   4,   1,   0,   2,   5, 218]]))]
