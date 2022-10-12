@@ -164,11 +164,11 @@ def run_experiment(config):
     log("Running experiment")
     # Scale up correct node pool, scale down the other
     if config.pod_size == "small":
-        scale_up_pool(1, config.parallelism)
         scale_up_pool(2, 0)
+        scale_up_pool(1, config.parallelism)
     else:
-        scale_up_pool(2, config.parallelism)
         scale_up_pool(1, 0)
+        scale_up_pool(2, min(config.parallelism,3))
 
     # Install new orchestrator
     install_experiment()
@@ -257,7 +257,7 @@ def perform_sweep(configs):
 
 # ids of experiments to not run, eg. that have already been completed. Ids are in string above for reference.
 #DONT_RUN_MASK = [0,2,4,6,8,10,12,14]
-DONT_RUN_MASK = [0,1,2,3,5,7,9,11,13,15]
+DONT_RUN_MASK = [0,1,2,3,4,5,6,7,8,9,10,11,13,15]
 
 # Parameters
 pod_sizes = ['small', 'big']
