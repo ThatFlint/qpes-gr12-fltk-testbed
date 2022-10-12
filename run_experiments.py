@@ -35,8 +35,8 @@ def log(s):
 
 # Class defining an experiment run
 class Config:
-    def __init__(self, node_pool, core, memory, parallelism, model, dataset, logdir):
-        self.node_pool = node_pool
+    def __init__(self, pod_size, core, memory, parallelism, model, dataset, logdir):
+        self.pod_size = pod_size
         self.core = core
         self.memory = memory
         self.parallelism = parallelism
@@ -78,7 +78,7 @@ def install_extractor():
     cmd_str = f"helm upgrade --install -n test extractor {extractor_path} -f {vals_path} \
     --set provider.projectName={PROJECT_ID}"
     subprocess.Popen(cmd_str, shell=True, stdout=subprocess.PIPE).communicate()
-    time.sleep(5)  # give extractor time to set up
+    time.sleep(10)  # give extractor time to set up
 
 
 # Removes results logger
@@ -163,11 +163,11 @@ def wait_for_finish(config):
 def run_experiment(config):
     log("Running experiment")
     # Scale up correct node pool, scale down the other
-    if config.node_pool == "small":
-        scale_up_pool(1, config.core)
+    if config.pod_size == "small":
+        scale_up_pool(1, config.parallelism)
         scale_up_pool(2, 0)
     else:
-        scale_up_pool(2, config.core)
+        scale_up_pool(2, config.parallelism)
         scale_up_pool(1, 0)
 
     # Install new orchestrator
@@ -231,14 +231,11 @@ def perform_sweep(configs):
         wait_for_finish(c)
         # Get any results
         collect_results(c)
-        # Remove the orchestrator
-        uninstall_experiment()
-        # Remove results logger
-        uninstall_extractor()
-        # Get rid of trainjobs
-        clean_pods()
-        if i == 1:
-            break # run only first two experiments for testing
+        # Clean up
+        clean_up(scale_down=False)
+        # Wait a bit for above actions to conclude
+        time.sleep(10)
+
 """
 0: ViTMNIST_mnist_rgb_small_1/
 1: ViTFlowers_flowers_small_1/
@@ -259,10 +256,11 @@ def perform_sweep(configs):
 """
 
 # ids of experiments to not run, eg. that have already been completed. Ids are in string above for reference.
-DONT_RUN_MASK = []
+#DONT_RUN_MASK = [0,2,4,6,8,10,12,14]
+DONT_RUN_MASK = [0,1,2,3,5,7,9,11,13,15]
 
 # Parameters
-node_pools = ['small', 'big']
+pod_sizes = ['small', 'big']
 parallelisms = [1, 4]
 models = ['ViT', 'EfficientNetV2']
 datasets = ['MNIST', 'Flowers']
@@ -276,11 +274,11 @@ if __name__ == "__main__":
         clean_up(scale_down=False)
         sys.exit(0)
     configs = []
-    for node_pool in node_pools:
+    for pod_size in pod_sizes:
         for parallelism in parallelisms:
             for model in models:
                 for dataset in datasets:
-                    if node_pool == 'small':
+                    if pod_size == 'small':
                         core = 1
                         memory = '4Gi'
                     else:
@@ -292,8 +290,8 @@ if __name__ == "__main__":
                         dataset_adj = "MNIST_RGB"
                     else:
                         dataset_adj = dataset
-                    logdir = f"./logging/{model_combined}_{dataset_adj.lower()}_{node_pool}_{parallelism}/"
-                    configs.append(Config(node_pool, core, memory, parallelism, model_combined, dataset_adj.lower(),logdir))
+                    logdir = f"./logging/{model_combined}_{dataset_adj.lower()}_{pod_size}_{parallelism}/"
+                    configs.append(Config(pod_size, core, memory, parallelism, model_combined, dataset_adj.lower(), logdir))
     clean_up(scale_down=False)
     scale_up_pool(0, 1)  # start default pool
     # Start running from 'resume' index if need to skip some experiments

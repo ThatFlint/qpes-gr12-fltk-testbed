@@ -10,7 +10,7 @@ class ViT_MNIST(VisionTransformer):
                                         patch_size=7,
                                         num_layers=6,
                                         num_heads=6,
-                                        hidden_dim=64,
+                                        hidden_dim=66,
                                         num_classes=10,
                                         mlp_dim=128)
 
@@ -34,7 +34,7 @@ class ViT_Flowers(VisionTransformer):
                                           patch_size=7,
                                           num_layers=6,
                                           num_heads=6,
-                                          hidden_dim=64,
+                                          hidden_dim=66,
                                           num_classes=102,
                                           mlp_dim=128)
 
