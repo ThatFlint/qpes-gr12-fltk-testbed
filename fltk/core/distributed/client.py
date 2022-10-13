@@ -124,6 +124,7 @@ class DistClient(DistNode):
         running_loss = 0.0
         final_running_loss = 0.0
         self.model.train()
+        #self._logger.info(f"Starting training round with dataset of length {len(self.dataset.get_train_loader())}")
         for i, (inputs, labels) in enumerate(self.dataset.get_train_loader()):
             # zero the parameter gradients
             self.optimizer.zero_grad()
@@ -191,6 +192,7 @@ class DistClient(DistNode):
         accuracy = 100.0 * correct / total
         confusion_mat: np.array = confusion_matrix(targets_, pred_)
 
+        # Disabled for testing flowers102
         class_precision: np.array = calculate_class_precision(confusion_mat)
         class_recall: np.array = calculate_class_recall(confusion_mat)
 

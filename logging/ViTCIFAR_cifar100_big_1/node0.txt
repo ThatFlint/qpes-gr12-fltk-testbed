@@ -1,0 +1,93 @@
+10-13-2022 11:19:40 root         INFO     Loading file config/configuration.fltk.json
+10-13-2022 11:19:40 root         INFO     Starting in client mode
+10-13-2022 11:19:40 root         INFO     Starting with host=trainjob-934c79c4-b3e1-4275-a46e-f37c86d97bfe-master-0 and port=23456
+10-13-2022 11:19:40 root         INFO     Starting Creating client with 0
+10-13-2022 11:19:40 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     Initializing learning client
+10-13-2022 11:19:41 root         INFO     Getting net: Nets.vit_cifar
+10-13-2022 11:19:41 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     Preparing learner model with distributed=False
+10-13-2022 11:19:41 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     Starting training of model Nets.vit_cifar with batch size 100 and max epochs 5.
+10-13-2022 11:19:42 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [1,     0] loss: 0.092
+10-13-2022 11:19:50 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [1,    50] loss: 4.426
+10-13-2022 11:19:58 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [1,   100] loss: 4.252
+10-13-2022 11:20:06 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [1,   150] loss: 4.136
+10-13-2022 11:20:14 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [1,   200] loss: 4.026
+10-13-2022 11:20:22 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [1,   250] loss: 3.965
+10-13-2022 11:20:31 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [1,   300] loss: 3.898
+10-13-2022 11:20:38 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [1,   350] loss: 3.821
+10-13-2022 11:20:46 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [1,   400] loss: 3.739
+10-13-2022 11:20:54 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [1,   450] loss: 3.731
+10-13-2022 11:21:07 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [2,     0] loss: 0.072
+10-13-2022 11:21:15 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [2,    50] loss: 3.652
+10-13-2022 11:21:23 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [2,   100] loss: 3.632
+10-13-2022 11:21:31 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [2,   150] loss: 3.579
+10-13-2022 11:21:39 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [2,   200] loss: 3.556
+10-13-2022 11:21:47 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [2,   250] loss: 3.520
+10-13-2022 11:21:55 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [2,   300] loss: 3.507
+10-13-2022 11:22:03 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [2,   350] loss: 3.442
+10-13-2022 11:22:11 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [2,   400] loss: 3.439
+10-13-2022 11:22:19 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [2,   450] loss: 3.396
+10-13-2022 11:22:33 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [3,     0] loss: 0.068
+10-13-2022 11:22:40 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [3,    50] loss: 3.326
+10-13-2022 11:22:48 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [3,   100] loss: 3.383
+10-13-2022 11:22:57 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [3,   150] loss: 3.291
+10-13-2022 11:23:05 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [3,   200] loss: 3.298
+10-13-2022 11:23:13 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [3,   250] loss: 3.308
+10-13-2022 11:23:21 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [3,   300] loss: 3.260
+10-13-2022 11:23:29 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [3,   350] loss: 3.261
+10-13-2022 11:23:37 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [3,   400] loss: 3.225
+10-13-2022 11:23:45 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [3,   450] loss: 3.227
+10-13-2022 11:23:59 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [4,     0] loss: 0.064
+10-13-2022 11:24:07 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [4,    50] loss: 3.159
+10-13-2022 11:24:14 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [4,   100] loss: 3.125
+10-13-2022 11:24:23 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [4,   150] loss: 3.131
+10-13-2022 11:24:31 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [4,   200] loss: 3.116
+10-13-2022 11:24:39 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [4,   250] loss: 3.190
+10-13-2022 11:24:47 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [4,   300] loss: 3.106
+10-13-2022 11:24:56 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [4,   350] loss: 3.102
+10-13-2022 11:25:04 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [4,   400] loss: 3.095
+10-13-2022 11:25:13 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [4,   450] loss: 3.077
+10-13-2022 11:25:27 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [5,     0] loss: 0.061
+10-13-2022 11:25:36 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [5,    50] loss: 2.993
+10-13-2022 11:25:45 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [5,   100] loss: 3.050
+10-13-2022 11:25:54 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [5,   150] loss: 3.005
+10-13-2022 11:26:02 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [5,   200] loss: 3.031
+10-13-2022 11:26:10 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [5,   250] loss: 3.012
+10-13-2022 11:26:19 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [5,   300] loss: 2.976
+10-13-2022 11:26:27 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [5,   350] loss: 2.988
+10-13-2022 11:26:35 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [5,   400] loss: 2.951
+10-13-2022 11:26:43 Client-0-934c79c4-b3e1-4275-a46e-f37c86d97bfe INFO     [5,   450] loss: 2.954
+10-13-2022 11:26:57 root         INFO     Stopping client...
+No argument path is provided.
+Files already downloaded and verified
+Files already downloaded and verified
+[EpochData(epoch_id=1, num_epochs=6, duration_train=80380, duration_test=5374, loss_train=3.7310099935531618, accuracy=13.18, loss=147.1976842880249, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[45,  0,  2, ...,  0,  1,  0],
+       [ 1,  8,  8, ...,  0,  1,  0],
+       [ 9,  0, 23, ...,  0,  2,  0],
+       ...,
+       [ 0,  0,  6, ..., 11,  1,  0],
+       [ 4,  2, 13, ...,  1,  9,  0],
+       [ 3,  0,  2, ...,  2,  2,  3]])), EpochData(epoch_id=2, num_epochs=6, duration_train=165190, duration_test=5763, loss_train=3.396282820701599, accuracy=17.74, loss=136.42035150527954, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[36,  1,  0, ...,  0,  0,  0],
+       [ 0, 33,  0, ...,  0,  0,  1],
+       [ 1,  3,  1, ...,  1,  1,  0],
+       ...,
+       [ 0,  1,  0, ...,  1,  0,  0],
+       [ 4,  5,  1, ...,  0,  4,  0],
+       [ 1,  3,  0, ...,  0,  0,  9]])), EpochData(epoch_id=3, num_epochs=6, duration_train=251283, duration_test=5685, loss_train=3.226929979324341, accuracy=21.1, loss=129.21084356307983, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[41,  3,  1, ...,  0,  0,  0],
+       [ 2, 34,  5, ...,  0,  0,  0],
+       [ 1,  5, 32, ...,  1,  1,  0],
+       ...,
+       [ 0,  0,  1, ..., 34,  0,  1],
+       [ 0,  4,  9, ...,  2,  2,  0],
+       [ 0,  1,  1, ...,  2,  0, 11]])), EpochData(epoch_id=4, num_epochs=6, duration_train=339548, duration_test=5727, loss_train=3.0769537830352784, accuracy=23.76, loss=123.5320053100586, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[77,  2,  0, ...,  0,  0,  0],
+       [ 8, 39,  0, ...,  0,  0,  0],
+       [20,  2, 19, ...,  0,  8,  0],
+       ...,
+       [ 0,  0,  0, ..., 35,  2,  1],
+       [ 4,  1,  3, ...,  2, 16,  0],
+       [ 0,  1,  0, ...,  1,  0, 21]])), EpochData(epoch_id=5, num_epochs=6, duration_train=429768, duration_test=5720, loss_train=2.9542720985412596, accuracy=26.23, loss=118.76453614234924, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[58,  1,  0, ...,  0,  1,  0],
+       [ 3, 39,  1, ...,  0,  0,  0],
+       [ 1,  1, 33, ...,  0,  8,  0],
+       ...,
+       [ 0,  1,  0, ..., 22,  0,  2],
+       [ 0,  0,  7, ...,  1, 12,  3],
+       [ 1,  1,  1, ...,  0,  0, 40]]))]

@@ -12,7 +12,7 @@ class CIFAR100Dataset(Dataset):
 
     DEFAULT_TRANSFORM = transforms.Compose([
         transforms.RandomHorizontalFlip(),
-        transforms.RandomCrop(32, 4),
+        transforms.RandomCrop(28),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.507, 0.487, 0.441], std=[0.267, 0.256, 0.276])
     ])

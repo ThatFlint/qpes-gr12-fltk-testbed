@@ -16,15 +16,14 @@ class ViT_MNIST(VisionTransformer):
 
 
 class ViT_CIFAR(VisionTransformer):
-    # eg ViT-Base-8
     def __init__(self):
-        super(ViT_CIFAR, self).__init__(image_size=32,
-                                        patch_size=8,
-                                        num_layers=12,
-                                        num_heads=12,
-                                        hidden_dim=768,
-                                        mlp_dim=3072,
-                                        num_classes=100)
+        super(ViT_CIFAR, self).__init__(image_size=28,
+                                          patch_size=7,
+                                          num_layers=6,
+                                          num_heads=6,
+                                          hidden_dim=66,
+                                          num_classes=100,
+                                          mlp_dim=128)
 
 
 class ViT_Flowers(VisionTransformer):

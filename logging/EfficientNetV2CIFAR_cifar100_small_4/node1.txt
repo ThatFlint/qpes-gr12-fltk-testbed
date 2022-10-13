@@ -1,0 +1,62 @@
+10-13-2022 10:46:00 root         INFO     Loading file config/configuration.fltk.json
+10-13-2022 10:46:00 root         INFO     Starting in client mode
+10-13-2022 10:46:00 root         INFO     Starting with host=trainjob-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9-master-0 and port=23456
+10-13-2022 10:46:00 root         INFO     Initializing backend for training process: gloo
+10-13-2022 10:46:01 torch.distributed.distributed_c10d INFO     Added key: store_based_barrier_key:1 to store for rank: 1
+10-13-2022 10:46:01 torch.distributed.distributed_c10d INFO     Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+10-13-2022 10:46:01 root         INFO     Starting Creating client with 1
+10-13-2022 10:46:01 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     Initializing learning client
+10-13-2022 10:46:03 root         INFO     Getting net: Nets.efficientnetv2_cifar
+10-13-2022 10:46:03 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     Preparing learner model with distributed=True
+10-13-2022 10:46:03 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     Starting training of model Nets.efficientnetv2_cifar with batch size 100 and max epochs 5.
+10-13-2022 10:46:05 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [1,     0] loss: 0.097
+10-13-2022 10:46:05 torch.nn.parallel.distributed INFO     Reducer buckets have been rebuilt in this iteration.
+10-13-2022 10:47:01 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [1,    50] loss: 4.700
+10-13-2022 10:47:56 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [1,   100] loss: 4.473
+10-13-2022 10:48:30 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [2,     0] loss: 0.082
+10-13-2022 10:49:27 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [2,    50] loss: 4.230
+10-13-2022 10:50:22 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [2,   100] loss: 4.163
+10-13-2022 10:50:56 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [3,     0] loss: 0.078
+10-13-2022 10:51:52 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [3,    50] loss: 4.017
+10-13-2022 10:52:48 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [3,   100] loss: 3.916
+10-13-2022 10:53:23 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [4,     0] loss: 0.072
+10-13-2022 10:54:18 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [4,    50] loss: 3.813
+10-13-2022 10:55:13 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [4,   100] loss: 3.761
+10-13-2022 10:55:48 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [5,     0] loss: 0.072
+10-13-2022 10:56:43 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [5,    50] loss: 3.668
+10-13-2022 10:57:38 Client-1-ad814b3b-bd83-44a9-8fec-91f9d39e1cc9 INFO     [5,   100] loss: 3.645
+10-13-2022 10:58:10 root         INFO     Stopping client...
+No argument path is provided.
+Files already downloaded and verified
+Files already downloaded and verified
+[EpochData(epoch_id=1, num_epochs=6, duration_train=139282, duration_test=6628, loss_train=4.4732772064208985, accuracy=5.8, loss=42.46610927581787, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[ 1,  0,  0, ...,  0,  9,  0],
+       [ 1,  0,  0, ...,  0,  5,  0],
+       [ 0,  0,  3, ...,  0, 10,  0],
+       ...,
+       [ 0,  0,  0, ...,  1,  1,  0],
+       [ 0,  0,  0, ...,  0,  8,  0],
+       [ 0,  0,  1, ...,  0,  4,  0]])), EpochData(epoch_id=2, num_epochs=6, duration_train=284911, duration_test=6395, loss_train=4.162906947135926, accuracy=7.12, loss=40.4209303855896, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[4, 0, 0, ..., 0, 0, 0],
+       [4, 2, 2, ..., 0, 0, 0],
+       [0, 0, 4, ..., 1, 2, 0],
+       ...,
+       [0, 0, 1, ..., 1, 0, 0],
+       [1, 0, 3, ..., 1, 1, 0],
+       [0, 0, 2, ..., 0, 1, 1]])), EpochData(epoch_id=3, num_epochs=6, duration_train=431408, duration_test=6884, loss_train=3.9158031368255615, accuracy=10.88, loss=38.47976589202881, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[11,  1,  1, ...,  0,  1,  0],
+       [ 5,  4,  0, ...,  0,  1,  0],
+       [ 2,  0,  7, ...,  0,  2,  0],
+       ...,
+       [ 0,  0,  0, ...,  1,  0,  0],
+       [ 0,  0,  2, ...,  0,  4,  0],
+       [ 2,  0,  0, ...,  0,  1,  0]])), EpochData(epoch_id=4, num_epochs=6, duration_train=576726, duration_test=6952, loss_train=3.7606180477142335, accuracy=11.8, loss=37.52253842353821, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[8, 0, 0, ..., 0, 1, 0],
+       [0, 7, 0, ..., 1, 0, 0],
+       [1, 0, 2, ..., 2, 4, 0],
+       ...,
+       [0, 0, 0, ..., 3, 0, 0],
+       [0, 0, 3, ..., 0, 3, 0],
+       [0, 0, 0, ..., 1, 0, 0]])), EpochData(epoch_id=5, num_epochs=6, duration_train=720709, duration_test=6379, loss_train=3.645110216140747, accuracy=14.96, loss=36.002721071243286, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[3, 0, 0, ..., 0, 1, 0],
+       [0, 9, 0, ..., 0, 0, 0],
+       [0, 0, 4, ..., 0, 5, 0],
+       ...,
+       [0, 0, 0, ..., 3, 1, 0],
+       [0, 0, 2, ..., 0, 3, 0],
+       [0, 0, 0, ..., 1, 0, 0]]))]

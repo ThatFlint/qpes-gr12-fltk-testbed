@@ -1,0 +1,62 @@
+10-13-2022 11:54:35 root         INFO     Loading file config/configuration.fltk.json
+10-13-2022 11:54:35 root         INFO     Starting in client mode
+10-13-2022 11:54:35 root         INFO     Starting with host=trainjob-ddc622d1-6562-447e-949a-25b5e4d2a6e7-master-0 and port=23456
+10-13-2022 11:54:35 root         INFO     Initializing backend for training process: gloo
+10-13-2022 11:54:35 torch.distributed.distributed_c10d INFO     Added key: store_based_barrier_key:1 to store for rank: 3
+10-13-2022 11:54:35 torch.distributed.distributed_c10d INFO     Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+10-13-2022 11:54:35 root         INFO     Starting Creating client with 3
+10-13-2022 11:54:35 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     Initializing learning client
+10-13-2022 11:54:36 root         INFO     Getting net: Nets.vit_cifar
+10-13-2022 11:54:36 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     Preparing learner model with distributed=True
+10-13-2022 11:54:36 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     Starting training of model Nets.vit_cifar with batch size 100 and max epochs 5.
+10-13-2022 11:54:37 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [1,     0] loss: 0.092
+10-13-2022 11:54:37 torch.nn.parallel.distributed INFO     Reducer buckets have been rebuilt in this iteration.
+10-13-2022 11:54:55 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [1,    50] loss: 4.404
+10-13-2022 11:55:14 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [1,   100] loss: 4.232
+10-13-2022 11:55:26 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [2,     0] loss: 0.078
+10-13-2022 11:55:45 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [2,    50] loss: 4.038
+10-13-2022 11:56:04 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [2,   100] loss: 3.970
+10-13-2022 11:56:16 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [3,     0] loss: 0.074
+10-13-2022 11:56:35 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [3,    50] loss: 3.869
+10-13-2022 11:56:54 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [3,   100] loss: 3.815
+10-13-2022 11:57:06 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [4,     0] loss: 0.070
+10-13-2022 11:57:24 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [4,    50] loss: 3.732
+10-13-2022 11:57:42 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [4,   100] loss: 3.704
+10-13-2022 11:57:54 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [5,     0] loss: 0.069
+10-13-2022 11:58:12 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [5,    50] loss: 3.640
+10-13-2022 11:58:30 Client-3-ddc622d1-6562-447e-949a-25b5e4d2a6e7 INFO     [5,   100] loss: 3.608
+10-13-2022 11:58:40 root         INFO     Stopping client...
+No argument path is provided.
+Files already downloaded and verified
+Files already downloaded and verified
+[EpochData(epoch_id=1, num_epochs=6, duration_train=46248, duration_test=1459, loss_train=4.231846055984497, accuracy=7.48, loss=40.40414500236511, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[ 0,  0,  1, ...,  0, 14,  0],
+       [ 1,  0,  0, ...,  0,  1,  0],
+       [ 0,  0,  4, ...,  0,  3,  1],
+       ...,
+       [ 0,  0,  5, ...,  0,  0,  0],
+       [ 0,  0,  2, ...,  0,  1,  0],
+       [ 0,  0,  0, ...,  0,  0,  1]])), EpochData(epoch_id=2, num_epochs=6, duration_train=96532, duration_test=1472, loss_train=3.9702317667007447, accuracy=9.24, loss=38.95302057266235, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[5, 0, 0, ..., 0, 7, 0],
+       [1, 0, 0, ..., 0, 0, 0],
+       [1, 0, 0, ..., 0, 4, 0],
+       ...,
+       [0, 0, 0, ..., 1, 0, 0],
+       [0, 0, 0, ..., 0, 4, 0],
+       [0, 0, 0, ..., 0, 0, 2]])), EpochData(epoch_id=3, num_epochs=6, duration_train=146646, duration_test=1450, loss_train=3.814548301696777, accuracy=12.24, loss=37.26174592971802, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[9, 0, 0, ..., 0, 1, 0],
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 4, ..., 0, 4, 1],
+       ...,
+       [0, 0, 0, ..., 6, 0, 1],
+       [0, 0, 1, ..., 0, 7, 0],
+       [0, 0, 0, ..., 0, 0, 9]])), EpochData(epoch_id=4, num_epochs=6, duration_train=194631, duration_test=1459, loss_train=3.7044811820983887, accuracy=13.88, loss=36.52866983413696, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[15,  0,  0, ...,  0,  1,  0],
+       [ 2,  0,  0, ...,  0,  1,  0],
+       [ 0,  1,  3, ...,  0,  4,  2],
+       ...,
+       [ 0,  0,  0, ...,  1,  0,  1],
+       [ 1,  0,  1, ...,  0,  4,  0],
+       [ 0,  0,  0, ...,  0,  0, 11]])), EpochData(epoch_id=5, num_epochs=6, duration_train=242641, duration_test=1390, loss_train=3.6077972412109376, accuracy=15.76, loss=35.742194175720215, class_precision=array([1]), class_recall=array([1]), confusion_mat=array([[14,  0,  0, ...,  0,  1,  0],
+       [ 0,  2,  0, ...,  0,  0,  0],
+       [ 1,  0,  3, ...,  0,  2,  1],
+       ...,
+       [ 0,  0,  0, ...,  4,  0,  1],
+       [ 0,  0,  1, ...,  0,  3,  0],
+       [ 0,  0,  0, ...,  0,  0,  8]]))]

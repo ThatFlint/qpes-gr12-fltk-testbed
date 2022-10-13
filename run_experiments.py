@@ -1,4 +1,5 @@
 import json
+from json.decoder import JSONDecodeError
 import os
 import subprocess
 import sys
@@ -118,7 +119,11 @@ def get_system_metrics(config):
         #print(f"    Getting metrics from {node}")
         cmd_str = f"kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes/{node} | jq '.usage'"
         res = subprocess.run(cmd_str, capture_output=True, shell=True).stdout.decode('utf-8')
-        usage_dict = json.loads(res)
+        try:
+            usage_dict = json.loads(res)
+        except JSONDecodeError:
+            log(f"  Metric retrieval failed")
+            usage_dict = {'cpu': -1, 'memory': -1}
         cpu = usage_dict['cpu']
         mem = usage_dict['memory']
         # Log cpu and memory to a log file
@@ -256,14 +261,14 @@ def perform_sweep(configs):
 """
 
 # ids of experiments to not run, eg. that have already been completed. Ids are in string above for reference.
-#DONT_RUN_MASK = [0,2,4,6,8,10,12,14]
-DONT_RUN_MASK = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+DONT_RUN_MASK = [0,1,2,3,4,5,6,7,8,10,12,14]
+#DONT_RUN_MASK = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
 # Parameters
 pod_sizes = ['small', 'big']
 parallelisms = [1, 4]
 models = ['ViT', 'EfficientNetV2']
-datasets = ['MNIST', 'Flowers']
+datasets = ['MNIST', 'CIFAR']
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -288,8 +293,8 @@ if __name__ == "__main__":
                     model_combined = model + dataset
                     if dataset == "MNIST":
                         dataset_adj = "MNIST_RGB"
-                    else:
-                        dataset_adj = dataset
+                    elif dataset == "CIFAR":
+                        dataset_adj = "CIFAR100"
                     logdir = f"./logging/{model_combined}_{dataset_adj.lower()}_{pod_size}_{parallelism}/"
                     configs.append(Config(pod_size, core, memory, parallelism, model_combined, dataset_adj.lower(), logdir))
     clean_up(scale_down=False)

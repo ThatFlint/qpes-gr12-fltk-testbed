@@ -15,7 +15,8 @@ class Flowers102Dataset(Dataset):
         transforms.RandomCrop(size=64, pad_if_needed=True),
         transforms.Resize(size=28),
         transforms.ToTensor(),
-        transforms.Normalize(mean=[0.507, 0.487, 0.441], std=[0.267, 0.256, 0.276])
+        transforms.Normalize([0.485, 0.456, 0.406],  # RGB mean & std estied on ImageNet
+                             [0.229, 0.224, 0.225])
     ])
 
     def __init__(self, config, learning_param, rank: int = 0, world_size: int = None):
